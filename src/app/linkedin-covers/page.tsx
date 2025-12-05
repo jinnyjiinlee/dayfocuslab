@@ -61,128 +61,31 @@ export default function LinkedInCovers() {
       ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
     }
 
-    // Decorative circles
-    ctx.globalAlpha = 0.05;
-    ctx.strokeStyle = style.textColor;
-    ctx.lineWidth = 1;
-
-    // Circle 1
-    ctx.beginPath();
-    ctx.arc(200, COVER_HEIGHT / 2, 150, 0, Math.PI * 2);
-    ctx.stroke();
-
-    // Circle 2
-    ctx.beginPath();
-    ctx.arc(COVER_WIDTH - 300, COVER_HEIGHT / 2, 200, 0, Math.PI * 2);
-    ctx.stroke();
-
-    // Circle 3
-    ctx.beginPath();
-    ctx.arc(COVER_WIDTH / 2, COVER_HEIGHT / 2, 250, 0, Math.PI * 2);
-    ctx.stroke();
-
-    ctx.globalAlpha = 1;
-
-    // Logo text - "Day Focus Lab"
-    ctx.font = 'bold 72px system-ui, -apple-system, sans-serif';
+    // Brand name - bottom right, simple
     ctx.fillStyle = style.textColor;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'bottom';
 
-    // Main title
-    const mainY = COVER_HEIGHT / 2 - 30;
-    ctx.fillText('Day Focus', COVER_WIDTH / 2, mainY);
-
-    // "Lab" in lighter weight
-    ctx.font = '300 72px system-ui, -apple-system, sans-serif';
-    const dayFocusWidth = ctx.measureText('Day Focus ').width;
-    ctx.font = 'bold 72px system-ui, -apple-system, sans-serif';
-    const totalWidth = ctx.measureText('Day Focus Lab').width;
-
-    // Redraw with proper spacing
-    ctx.clearRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-
-    // Redraw background
-    if (style.bgStyle === 'solid') {
-      ctx.fillStyle = '#000000';
-      ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-    } else if (style.bgStyle === 'gradient1') {
-      const gradient = ctx.createLinearGradient(0, 0, COVER_WIDTH, COVER_HEIGHT);
-      gradient.addColorStop(0, '#1a1a1a');
-      gradient.addColorStop(1, '#000000');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-    } else if (style.bgStyle === 'gradient2') {
-      const gradient = ctx.createLinearGradient(0, 0, COVER_WIDTH, 0);
-      gradient.addColorStop(0, '#f5f5f5');
-      gradient.addColorStop(1, '#ffffff');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-    } else if (style.bgStyle === 'gradient3') {
-      ctx.fillStyle = '#ffffff';
-      ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-      ctx.strokeStyle = '#e5e5e5';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(1, 1, COVER_WIDTH - 2, COVER_HEIGHT - 2);
-    } else if (style.bgStyle === 'gradient4') {
-      const gradient = ctx.createLinearGradient(0, 0, COVER_WIDTH, COVER_HEIGHT);
-      gradient.addColorStop(0, '#0a0a0a');
-      gradient.addColorStop(0.5, '#1a1a1a');
-      gradient.addColorStop(1, '#0a0a0a');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, COVER_WIDTH, COVER_HEIGHT);
-    }
-
-    // Redraw circles
-    ctx.globalAlpha = 0.05;
-    ctx.strokeStyle = style.textColor;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.arc(200, COVER_HEIGHT / 2, 150, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(COVER_WIDTH - 300, COVER_HEIGHT / 2, 200, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(COVER_WIDTH / 2, COVER_HEIGHT / 2, 250, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.globalAlpha = 1;
-
-    // Draw "Day Focus" bold
-    ctx.fillStyle = style.textColor;
-    ctx.font = 'bold 72px system-ui, -apple-system, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-
-    const text1 = 'Day Focus';
+    // "Day Focus" bold + "Lab" light
+    const text1 = 'Day Focus ';
     const text2 = 'Lab';
-    ctx.font = 'bold 72px system-ui, -apple-system, sans-serif';
-    const w1 = ctx.measureText(text1 + ' ').width;
-    ctx.font = '300 72px system-ui, -apple-system, sans-serif';
+
+    ctx.font = 'bold 36px system-ui, -apple-system, sans-serif';
+    const w1 = ctx.measureText(text1).width;
+    ctx.font = '300 36px system-ui, -apple-system, sans-serif';
     const w2 = ctx.measureText(text2).width;
-    const totalW = w1 + w2;
-    const startX = (COVER_WIDTH - totalW) / 2;
 
-    ctx.font = 'bold 72px system-ui, -apple-system, sans-serif';
+    const rightPadding = 60;
+    const bottomPadding = 50;
+    const startX = COVER_WIDTH - rightPadding - w2;
+
+    ctx.font = 'bold 36px system-ui, -apple-system, sans-serif';
+    ctx.textAlign = 'right';
+    ctx.fillText(text1, startX, COVER_HEIGHT - bottomPadding);
+
+    ctx.font = '300 36px system-ui, -apple-system, sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText(text1 + ' ', startX, mainY);
-
-    ctx.font = '300 72px system-ui, -apple-system, sans-serif';
-    ctx.fillText(text2, startX + w1, mainY);
-
-    // Tagline
-    ctx.font = '24px system-ui, -apple-system, sans-serif';
-    ctx.fillStyle = style.accentColor;
-    ctx.textAlign = 'center';
-    ctx.fillText('당신의 하루에 집중하다', COVER_WIDTH / 2, mainY + 60);
-
-    // Small decorative line
-    ctx.strokeStyle = style.accentColor;
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(COVER_WIDTH / 2 - 50, mainY + 90);
-    ctx.lineTo(COVER_WIDTH / 2 + 50, mainY + 90);
-    ctx.stroke();
+    ctx.fillText(text2, startX, COVER_HEIGHT - bottomPadding);
   };
 
   useEffect(() => {
