@@ -175,6 +175,29 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* KakaoTalk */}
+              <a
+                href="https://open.kakao.com/o/sSp6Rcli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-[#FEE500] p-6 rounded-2xl hover:shadow-md transition-all group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-[#3C1E1E] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#FEE500">
+                      <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.86 5.22 4.65 6.6-.15.53-.54 1.91-.62 2.21-.1.37.14.36.29.26.12-.08 1.82-1.22 2.56-1.72.69.1 1.4.15 2.12.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#3C1E1E] text-lg">카카오톡으로 문의하기</p>
+                    <p className="text-[#3C1E1E]/60 text-sm">빠른 상담을 원하시면 카카오톡으로 연락주세요</p>
+                  </div>
+                  <svg className="w-5 h-5 text-[#3C1E1E]/40 ml-auto group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </a>
+
               {/* Tagline */}
               <div className="bg-gradient-to-br from-[#0066FF] to-[#0B1222] text-white p-8 rounded-3xl">
                 <p className="text-2xl font-bold mb-2">Day Focus Lab</p>
