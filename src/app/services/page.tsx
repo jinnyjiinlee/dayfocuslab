@@ -127,30 +127,12 @@ export default function Services() {
 
             {/* Visual */}
             <div>
-              <div className="aspect-square bg-[#F7F9FC] rounded-3xl flex items-center justify-center relative overflow-hidden">
-                {/* Abstract geometric design */}
-                <div className="absolute inset-0">
-                  {/* Large gradient circle */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-[#0066FF]/20 to-[#0066FF]/5" />
-                  {/* Smaller accent circles */}
-                  <div className="absolute top-12 right-16 w-24 h-24 rounded-full bg-[#0066FF]/10" />
-                  <div className="absolute bottom-16 left-12 w-32 h-32 rounded-full border-2 border-[#0066FF]/15" />
-                  <div className="absolute top-24 left-20 w-16 h-16 rounded-full bg-[#0066FF]/8" />
-                  {/* Ring */}
-                  <div className="absolute bottom-24 right-20 w-20 h-20 rounded-full border-2 border-[#0066FF]/20" />
-                  {/* Dot grid pattern */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-cols-5 gap-4">
-                    {Array.from({ length: 25 }).map((_, i) => (
-                      <div key={i} className="w-2 h-2 rounded-full bg-[#0066FF]/10" />
-                    ))}
-                  </div>
-                  {/* Center icon */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-2xl bg-[#0066FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/25">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] bg-[#F7F9FC] rounded-3xl overflow-hidden shadow-lg">
+                <img
+                  src="/images/ai-pt.jpeg"
+                  alt="AI PT 1:1 컨설팅 현장"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
