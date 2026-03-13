@@ -63,7 +63,7 @@ export const translations = {
         role: 'DAYFOCUS LAB 대표',
         bio: 'AI 기술과 시스템 설계를 결합해 업무 자동화를 실현하는 AX(AI Transformation) 전문가입니다. 코르카에서 AX 엔지니어로 근무하며 AI 도입 프로젝트를 수행했고, 코드잇에서는 운영 기획·자동화·개발을 담당했습니다. 현재 스터디카페 2개 지점을 직접 운영하며 클로드코드를 활용해 매장 운영 업무 90% 자동화를 달성했습니다.',
         expertise: ['AI Transformation', '업무 자동화', '클로드코드', '공간 운영'],
-        linkedin: 'https://www.linkedin.com/in/%EC%A7%80%EC%9D%B8-%EC%9D%B4-15b4072b8/',
+        linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
         experience: [
           '전) 코르카 AX(AI Transformation) 엔지니어',
           '전) 코드잇 LX Planning Manager (운영 기획·자동화·개발)',
@@ -198,7 +198,7 @@ export const translations = {
         role: 'CEO',
         bio: 'I am Jiin Lee, CEO of Day Focus Lab. I believe in the value of focus and growth, and am committed to creating an environment where people can maximize their potential. Through AI-powered business innovation and hands-on space management, I aim to build a growth ecosystem where theory and practice harmonize.',
         expertise: ['AI Transformation', 'Business Consulting', 'Space Management'],
-        linkedin: 'https://www.linkedin.com/in/%EC%A7%80%EC%9D%B8-%EC%9D%B4-15b4072b8/',
+        linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
         experience: [
           'Former AX Engineer at Korka',
           'Former LX Planning Manager at Codeit',
