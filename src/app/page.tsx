@@ -53,20 +53,34 @@ export default function Home() {
             <p className="text-gray-600">{t.services.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* AX Consulting */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* AI PT */}
+            <div className="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-black transition-colors">
+              <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2">{t.services.ax.title}</h3>
+              <p className="text-sm text-gray-500 mb-4">{t.services.ax.subtitle}</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.services.ax.description}</p>
+              <p className="text-sm font-bold mt-4">{t.services.ax.price}</p>
+            </div>
+
+            {/* Workshop */}
             <div className="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-black transition-colors">
               <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2">{t.services.ax.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{t.services.ax.subtitle}</p>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.services.ax.description}</p>
+              <h3 className="text-xl font-bold mb-2">{t.services.workshop.title}</h3>
+              <p className="text-sm text-gray-500 mb-4">{t.services.workshop.subtitle}</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.services.workshop.description}</p>
+              <p className="text-sm font-bold mt-4">{t.services.workshop.price}</p>
             </div>
 
-            {/* Study Cafe */}
+            {/* Focus Space */}
             <div className="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-black transition-colors">
               <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,18 +90,6 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-2">{t.services.studycafe.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{t.services.studycafe.subtitle}</p>
               <p className="text-gray-600 text-sm leading-relaxed">{t.services.studycafe.description}</p>
-            </div>
-
-            {/* Coaching */}
-            <div className="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-black transition-colors">
-              <div className="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">{t.services.coaching.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">{t.services.coaching.subtitle}</p>
-              <p className="text-gray-600 text-sm leading-relaxed">{t.services.coaching.description}</p>
             </div>
           </div>
 

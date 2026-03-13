@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & Tagline */}
           <div className="space-y-4">
             <div className="text-2xl font-bold tracking-tight">
@@ -24,31 +24,49 @@ export default function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+              <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm">
                 {t.nav.home}
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+              <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">
                 {t.nav.services}
               </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+              <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
                 {t.nav.about}
               </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
                 {t.nav.contact}
               </Link>
             </nav>
           </div>
 
-          {/* Services */}
+          {/* Legal */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-              Services
+              Legal
             </h4>
             <nav className="flex flex-col space-y-2">
-              <span className="text-gray-300">{t.services.ax.title}</span>
-              <span className="text-gray-300">{t.services.studycafe.title}</span>
-              <span className="text-gray-300">{t.services.coaching.title}</span>
+              <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+                이용약관
+              </Link>
+              <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+                개인정보처리방침
+              </Link>
             </nav>
+          </div>
+
+          {/* Business Info */}
+          <div className="space-y-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+              Business
+            </h4>
+            <div className="text-gray-400 text-xs space-y-1 leading-relaxed">
+              <p>상호: 데이포커스랩</p>
+              <p>대표: 이지인</p>
+              <p>사업자등록번호: 546-10-03346</p>
+              <p>주소: 서울특별시 광진구 능동로 330, 5층</p>
+              <p>이메일: dayfocuslab@gmail.com</p>
+              <p>전화: 010-4067-5392</p>
+            </div>
           </div>
         </div>
 
