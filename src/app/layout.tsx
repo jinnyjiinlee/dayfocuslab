@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Day Focus Lab | 당신의 하루에 집중하다",
-  description: "Day Focus Lab은 AI Transformation 컨설팅, 스터디카페 운영, 개인 코칭을 통해 당신의 성장을 돕습니다.",
+  description: "Day Focus Lab은 AI Transformation 컨설팅, 집중 환경 설계, 개인 코칭을 통해 당신의 하루를 가장 가치 있게 만듭니다.",
   keywords: ["AI 컨설팅", "스터디카페", "코칭", "생산성", "집중", "성장"],
   openGraph: {
     title: "Day Focus Lab | 당신의 하루에 집중하다",

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from './LanguageContext';
 
@@ -7,14 +8,21 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="relative bg-[#0B1222] text-white">
+      {/* Subtle top gradient border */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & Tagline */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold tracking-tight">
-              Day Focus <span className="font-light">Lab</span>
-            </div>
+            <Image
+              src="/images/logo/logo-white.png"
+              alt="Day Focus Lab"
+              width={160}
+              height={32}
+              className="h-8 w-auto"
+            />
             <p className="text-gray-400 text-sm">{t.footer.tagline}</p>
           </div>
 
@@ -24,16 +32,16 @@ export default function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 {t.nav.home}
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/services" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 {t.nav.services}
               </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/about" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 {t.nav.about}
               </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/contact" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 {t.nav.contact}
               </Link>
             </nav>
@@ -45,10 +53,10 @@ export default function Footer() {
               Legal
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/terms" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 이용약관
               </Link>
-              <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link href="/privacy" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
                 개인정보처리방침
               </Link>
             </nav>
@@ -71,9 +79,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
+        <div className="mt-16 pt-8 border-t border-gray-800/50">
           <p className="text-gray-500 text-sm text-center">
-            {t.footer.copyright}
+            &copy; 2025-2026 Day Focus Lab. All rights reserved.
           </p>
         </div>
       </div>
