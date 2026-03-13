@@ -9,10 +9,13 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid"
         style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F7F9FC 100%)' }}
       >
-        {/* Decorative background circles/dots */}
+        {/* Grid overlay */}
+        <div className="absolute inset-0 bg-dot-grid" />
+
+        {/* Decorative background elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
             className="absolute -top-10 -right-20 w-[500px] h-[500px] rounded-full opacity-[0.07]"
@@ -26,38 +29,80 @@ export default function Home() {
             className="absolute bottom-10 right-1/4 w-[300px] h-[300px] rounded-full opacity-[0.06]"
             style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
           />
-          {/* Dot pattern */}
-          <div className="absolute top-32 left-[15%] w-3 h-3 rounded-full opacity-20" style={{ backgroundColor: '#0066FF' }} />
-          <div className="absolute top-48 left-[10%] w-2 h-2 rounded-full opacity-15" style={{ backgroundColor: '#0066FF' }} />
-          <div className="absolute top-20 right-[20%] w-2.5 h-2.5 rounded-full opacity-20" style={{ backgroundColor: '#0066FF' }} />
-          <div className="absolute bottom-32 left-[25%] w-2 h-2 rounded-full opacity-15" style={{ backgroundColor: '#0066FF' }} />
-          <div className="absolute top-[60%] right-[12%] w-3 h-3 rounded-full opacity-10" style={{ backgroundColor: '#0066FF' }} />
-          <div className="absolute bottom-48 right-[35%] w-1.5 h-1.5 rounded-full opacity-25" style={{ backgroundColor: '#0066FF' }} />
+        </div>
+
+        {/* Floating tech badges */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
+          <div className="absolute top-[18%] left-[8%] animate-float-slow opacity-0 animate-fade-in animation-delay-800">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-xl px-4 py-2.5 shadow-lg shadow-blue-500/5">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-400" />
+                <span className="text-xs font-mono text-gray-600">AI-Powered</span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute top-[25%] right-[10%] animate-float-delay opacity-0 animate-fade-in animation-delay-1000">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-xl px-4 py-2.5 shadow-lg shadow-blue-500/5">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-[#0066FF]" />
+                <span className="text-xs font-mono text-gray-600">1:1 Consulting</span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-[28%] left-[12%] animate-float opacity-0 animate-fade-in animation-delay-1000">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-xl px-4 py-2.5 shadow-lg shadow-blue-500/5">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-400" />
+                <span className="text-xs font-mono text-gray-600">Automation 90%</span>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-[22%] right-[8%] animate-float-slow opacity-0 animate-fade-in animation-delay-800">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-xl px-4 py-2.5 shadow-lg shadow-blue-500/5">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-amber-400" />
+                <span className="text-xs font-mono text-gray-600">Focus Space</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <div className="opacity-0 animate-fade-in">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-sm text-[#0066FF] font-medium mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0066FF] animate-pulse" />
+              AI Transformation Partner
+            </span>
+          </div>
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 opacity-0 animate-fade-in"
-            style={{ color: '#0B1222' }}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 opacity-0 animate-fade-in animation-delay-200"
           >
-            {t.hero.title}
+            <span className="text-gradient">{t.hero.title}</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 mb-4 opacity-0 animate-fade-in animation-delay-200">
+          <p className="text-lg md:text-xl text-gray-500 mb-4 opacity-0 animate-fade-in animation-delay-400">
             {t.hero.subtitle}
           </p>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in animation-delay-400">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in animation-delay-600">
             {t.hero.description}
           </p>
-          <div className="opacity-0 animate-fade-in animation-delay-600">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in animation-delay-800">
             <Link
               href="/services"
-              className="inline-block px-8 py-4 text-white font-medium rounded-xl transition-colors"
-              style={{ backgroundColor: '#0066FF' }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0052CC')}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0066FF')}
+              className="btn-glow shimmer inline-block px-8 py-4 text-white font-medium rounded-xl"
             >
               {t.hero.cta}
             </Link>
+            <a
+              href="https://open.kakao.com/o/sSp6Rcli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:border-[#0066FF] hover:text-[#0066FF] transition-all"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.86 5.22 4.65 6.6-.15.53-.54 1.91-.62 2.21-.1.37.14.36.29.26.12-.08 1.82-1.22 2.56-1.72.69.1 1.4.15 2.12.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/>
+              </svg>
+              무료 상담하기
+            </a>
           </div>
         </div>
 
@@ -69,10 +114,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-gradient">90%</p>
+              <p className="text-sm text-gray-500">업무 자동화 달성</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-gradient">1:1</p>
+              <p className="text-sm text-gray-500">맞춤 대면 컨설팅</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-gradient">2+</p>
+              <p className="text-sm text-gray-500">포커스 스페이스</p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-3xl md:text-4xl font-bold text-gradient">24/7</p>
+              <p className="text-sm text-gray-500">운영 지원</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Preview Section */}
-      <section className="py-24" style={{ backgroundColor: '#F7F9FC' }}>
+      <section className="py-24 bg-dot-grid" style={{ backgroundColor: '#F7F9FC' }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#0066FF] uppercase tracking-wider mb-4">Services</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#0B1222' }}>
               {t.services.title}
             </h2>
@@ -80,19 +150,19 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* AI PT */}
-            <div className="group bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
-              style={{ borderColor: undefined }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#0066FF')}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#E5E7EB')}
-            >
-              <div
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
-                style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
-              >
-                <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+            {/* AI PT - Featured */}
+            <div className="card-glow relative bg-white p-8 rounded-2xl border border-gray-200 overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0066FF] to-[#00C2FF]" />
+              <div className="flex items-center gap-3 mb-6">
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center relative pulse-ring"
+                  style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <span className="px-2 py-0.5 bg-[#0066FF] text-white text-[10px] font-bold uppercase tracking-wider rounded">Main</span>
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#0B1222' }}>{t.services.ax.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{t.services.ax.subtitle}</p>
@@ -101,12 +171,9 @@ export default function Home() {
             </div>
 
             {/* Workshop */}
-            <div className="group bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#0066FF')}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#E5E7EB')}
-            >
+            <div className="card-glow bg-white p-8 rounded-2xl border border-gray-200">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
                 style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
               >
                 <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
@@ -120,12 +187,9 @@ export default function Home() {
             </div>
 
             {/* Focus Space */}
-            <div className="group bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#0066FF')}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#E5E7EB')}
-            >
+            <div className="card-glow bg-white p-8 rounded-2xl border border-gray-200">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
                 style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
               >
                 <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
@@ -141,11 +205,10 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center font-medium hover:underline"
-              style={{ color: '#0066FF' }}
+              className="inline-flex items-center gap-2 font-medium text-[#0066FF] hover:gap-3 transition-all"
             >
               서비스 알아보기
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -153,22 +216,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#0066FF] uppercase tracking-wider mb-4">Process</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222]">이용 절차</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { step: '01', title: '무료 설문지 작성', desc: '현재 업무 현황과 AI 도입 목표를 알려주세요', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+              { step: '02', title: '무료 상담 진행', desc: '설문 내용을 바탕으로 맞춤 상담을 진행합니다', icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z' },
+              { step: '03', title: '결제 후 PT 시작', desc: '1:1 대면 AI PT로 업무 혁신을 시작하세요', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+            ].map((item, i) => (
+              <div key={i} className="relative text-center group">
+                <div className="w-16 h-16 mx-auto mb-6 bg-blue-50 rounded-2xl flex items-center justify-center group-hover:bg-[#0066FF] transition-colors duration-300">
+                  <svg className="w-7 h-7 text-[#0066FF] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
+                  </svg>
+                </div>
+                <span className="text-xs font-mono text-[#0066FF]/50 uppercase tracking-widest">{item.step}</span>
+                <h3 className="text-lg font-bold text-[#0B1222] mt-1 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-500">{item.desc}</p>
+                {i < 2 && (
+                  <div className="hidden md:block absolute top-8 -right-4 w-8 text-gray-300">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission Statement Section */}
       <section
-        className="py-24 text-white"
-        style={{ background: 'linear-gradient(135deg, #0066FF 0%, #0052CC 100%)' }}
+        className="py-24 text-white relative overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #0066FF 0%, #0052CC 50%, #0B1222 100%)' }}
       >
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        {/* Decorative grid */}
+        <div className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+            backgroundSize: '60px 60px'
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
             {t.about.mission.title}
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed" style={{ color: '#BFDBFE' }}>
+          <p className="text-lg md:text-xl leading-relaxed text-blue-100">
             {t.about.mission.description}
           </p>
           <div className="mt-12">
             <Link
               href="/about"
-              className="inline-block px-8 py-4 bg-white font-medium rounded-xl transition-colors hover:bg-gray-100"
+              className="inline-block px-8 py-4 bg-white font-medium rounded-xl transition-all hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20"
               style={{ color: '#0066FF' }}
             >
               {t.nav.about}
@@ -183,15 +289,25 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0B1222' }}>
             {t.contact.subtitle}
           </h2>
-          <Link
-            href="/contact"
-            className="inline-block px-8 py-4 text-white font-medium rounded-xl transition-colors"
-            style={{ backgroundColor: '#0066FF' }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0052CC')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#0066FF')}
-          >
-            {t.nav.contact}
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-glow shimmer inline-block px-8 py-4 text-white font-medium rounded-xl"
+            >
+              {t.nav.contact}
+            </Link>
+            <a
+              href="https://open.kakao.com/o/sSp6Rcli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#FEE500] text-[#3C1E1E] font-medium rounded-xl hover:shadow-lg hover:shadow-yellow-500/20 transition-all"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.86 5.22 4.65 6.6-.15.53-.54 1.91-.62 2.21-.1.37.14.36.29.26.12-.08 1.82-1.22 2.56-1.72.69.1 1.4.15 2.12.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/>
+              </svg>
+              카카오톡 상담
+            </a>
+          </div>
         </div>
       </section>
     </>
