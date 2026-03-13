@@ -81,12 +81,14 @@ export const translations = {
           status: '운영중',
           description: '지니 24 스터디카페와 제휴하여 운영하는 첫 번째 집중 공간입니다. 24시간 운영되며, 노트북 작업에 최적화된 쾌적한 공간과 휴식을 위한 빈백존을 제공합니다.',
           website: 'https://gunjageinie24.vercel.app/',
+          map: 'https://map.naver.com/p/entry/place/2024921054',
         },
         location2: {
           name: '경기 산본점',
           address: '경기도 군포시 산본',
-          status: '2026년 1월 12일 오픈 예정',
+          status: '운영중',
           description: '더 넓고 쾌적한 환경으로 여러분을 찾아갑니다. 산본에서 더 나은 집중 경험을 제공하겠습니다.',
+          map: 'https://map.naver.com/p/search/%EC%82%B0%EB%B3%B8%EC%8A%A4%ED%84%B0%EB%94%94%EC%B9%B4%ED%8E%98%EB%8D%B0%EC%9D%B4%EB%9E%A9/place/2026690755',
         },
         location3: {
           name: '3호점',
@@ -216,12 +218,14 @@ export const translations = {
           status: 'Now Open',
           description: 'Our first focus space operated in partnership with Genie 24 Study Cafe. Open 24/7, featuring laptop-friendly workspaces and a relaxing bean bag zone.',
           website: 'https://gunjageinie24.vercel.app/',
+          map: 'https://map.naver.com/p/entry/place/2024921054',
         },
         location2: {
           name: 'Gyeonggi Sanbon',
           address: 'Sanbon, Gunpo-si, Gyeonggi-do',
-          status: 'Opening on January 12, 2026',
+          status: 'Now Open',
           description: 'We are coming to you with a larger and more comfortable environment in Sanbon, offering an even better focus experience.',
+          map: 'https://map.naver.com/p/search/%EC%82%B0%EB%B3%B8%EC%8A%A4%ED%84%B0%EB%94%94%EC%B9%B4%ED%8E%98%EB%8D%B0%EC%9D%B4%EB%9E%A9/place/2026690755',
         },
         location3: {
           name: 'Location 3',
