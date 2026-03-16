@@ -11,7 +11,7 @@ export const translations = {
     hero: {
       title: '당신의 하루에 집중하다',
       subtitle: '집중이 성장이 됩니다',
-      description: 'AI PT를 통해 업무에 AI를 도입하고, 반복 업무를 자동화하세요. 1:1 맞춤 컨설팅으로 당신의 성장을 돕습니다.',
+      description: 'AI PT를 통해 업무에 AI를 도입하고, 반복 업무를 자동화하세요. 1:1 PT부터 그룹 PT까지, 당신의 성장을 돕습니다.',
       cta: 'AI PT 알아보기',
     },
     services: {
@@ -19,8 +19,8 @@ export const translations = {
       subtitle: '집중을 통한 성장, Day Focus Lab이 함께합니다',
       ax: {
         title: 'AI PT',
-        subtitle: '1:1 AI 퍼스널 트레이닝',
-        description: '업무에 AI를 활용해 효율화하고 싶지만 어디서부터 시작할지 모르는 직장인, 사업장에 AI를 도입해 자동화하고 싶지만 AI에 대해 잘 모르는 자영업자를 위한 1:1 맞춤형 대면 컨설팅입니다.',
+        subtitle: '1:1 PT · 그룹 PT',
+        description: '업무에 AI를 활용해 효율화하고 싶지만 어디서부터 시작할지 모르는 직장인, 사업장에 AI를 도입해 자동화하고 싶지만 AI에 대해 잘 모르는 자영업자를 위한 맞춤형 대면 AI 트레이닝입니다. 1:1 PT와 그룹 PT 중 선택할 수 있습니다.',
         target: {
           office: {
             title: '직장인',
@@ -33,8 +33,9 @@ export const translations = {
         },
         price: '시간당 20만원 (1회 최소 3시간)',
         location: '패스트파이브 성수 2호점',
+        serviceDuration: '결제일로부터 최대 3개월',
         process: ['무료 설문지 작성', '무료 상담 진행', '결제 후 AI PT 시작'],
-        features: ['1:1 맞춤 대면 컨설팅', '업무 프로세스 분석 및 자동화', '실전 AI 도구 활용법', '즉시 적용 가능한 솔루션 제공'],
+        features: ['1:1 PT · 그룹 PT 선택 가능', '업무 프로세스 분석 및 자동화', '실전 AI 도구 활용법', '즉시 적용 가능한 솔루션 제공'],
       },
       workshop: {
         title: 'AX 특강',
@@ -133,6 +134,40 @@ export const translations = {
         description: '문의 폼을 통해 연락주시면 빠르게 답변드리겠습니다.',
       },
     },
+    payment: {
+      checkout: {
+        title: '결제하기',
+        subtitle: 'AI PT 결제',
+        serviceName: 'AI PT (AI 퍼스널 트레이닝)',
+        hours: '시간',
+        amount: '결제 금액',
+        serviceDuration: '서비스 제공기간',
+        serviceDurationValue: '결제일로부터 최대 3개월',
+        agreeTerms: '이용약관에 동의합니다',
+        viewTerms: '약관 보기',
+        pay: '결제하기',
+        invalidParams: '잘못된 결제 정보입니다.',
+        goBack: '서비스 페이지로 돌아가기',
+      },
+      success: {
+        title: '결제가 완료되었습니다',
+        orderId: '주문번호',
+        amount: '결제금액',
+        guide: '카카오톡으로 일정 안내를 드리겠습니다.',
+        kakao: '카카오톡 문의',
+        home: '홈으로',
+        verifying: '결제를 확인하고 있습니다...',
+        error: '결제 확인 중 오류가 발생했습니다.',
+        retry: '다시 시도',
+      },
+      fail: {
+        title: '결제에 실패했습니다',
+        errorCode: '에러 코드',
+        errorMessage: '에러 메시지',
+        retry: '다시 시도하기',
+        contact: '문의하기',
+      },
+    },
     footer: {
       copyright: '© 2024 Day Focus Lab. All rights reserved.',
       tagline: '당신의 하루에 집중하다',
@@ -156,8 +191,8 @@ export const translations = {
       subtitle: 'Growth through Focus, Day Focus Lab is with you',
       ax: {
         title: 'AI PT',
-        subtitle: '1:1 AI Personal Training',
-        description: 'Personalized 1:1 in-person consulting for office workers who want to leverage AI but don\'t know where to start, and business owners who want to automate with AI but lack technical knowledge.',
+        subtitle: '1:1 & Group AI Personal Training',
+        description: 'In-person AI training for office workers who want to leverage AI but don\'t know where to start, and business owners who want to automate with AI but lack technical knowledge. Choose between 1:1 PT or Group PT.',
         target: {
           office: {
             title: 'Office Workers',
@@ -170,8 +205,9 @@ export const translations = {
         },
         price: '200,000 KRW/hour (min. 3 hours per session)',
         location: 'FastFive Seongsu Branch 2',
+        serviceDuration: 'Up to 3 months from payment date',
         process: ['Free survey', 'Free consultation', 'Payment & AI PT starts'],
-        features: ['1:1 In-person Consulting', 'Workflow Analysis & Automation', 'Practical AI Tool Training', 'Ready-to-Apply Solutions'],
+        features: ['1:1 PT & Group PT Available', 'Workflow Analysis & Automation', 'Practical AI Tool Training', 'Ready-to-Apply Solutions'],
       },
       workshop: {
         title: 'AX Workshop',
@@ -268,6 +304,40 @@ export const translations = {
       info: {
         title: 'Contact Info',
         description: 'Please use the contact form and we will get back to you promptly.',
+      },
+    },
+    payment: {
+      checkout: {
+        title: 'Payment',
+        subtitle: 'AI PT Payment',
+        serviceName: 'AI PT (AI Personal Training)',
+        hours: 'Hours',
+        amount: 'Amount',
+        serviceDuration: 'Service Period',
+        serviceDurationValue: 'Up to 3 months from payment date',
+        agreeTerms: 'I agree to the Terms of Service',
+        viewTerms: 'View Terms',
+        pay: 'Pay Now',
+        invalidParams: 'Invalid payment information.',
+        goBack: 'Back to Services',
+      },
+      success: {
+        title: 'Payment Completed',
+        orderId: 'Order ID',
+        amount: 'Amount',
+        guide: 'We will contact you via KakaoTalk for scheduling.',
+        kakao: 'KakaoTalk Inquiry',
+        home: 'Home',
+        verifying: 'Verifying payment...',
+        error: 'An error occurred while verifying payment.',
+        retry: 'Try Again',
+      },
+      fail: {
+        title: 'Payment Failed',
+        errorCode: 'Error Code',
+        errorMessage: 'Error Message',
+        retry: 'Try Again',
+        contact: 'Contact Us',
       },
     },
     footer: {

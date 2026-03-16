@@ -44,7 +44,7 @@ export default function Services() {
 
               {/* Price & Location */}
               <div className="mb-8 bg-blue-50 p-6 rounded-xl">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
                     <p className="text-xs text-[#0066FF]/60 uppercase tracking-wider font-medium mb-1">Price</p>
                     <p className="font-bold text-lg text-[#0B1222]">{t.services.ax.price}</p>
@@ -53,6 +53,10 @@ export default function Services() {
                     <p className="text-xs text-[#0066FF]/60 uppercase tracking-wider font-medium mb-1">Location</p>
                     <p className="font-bold text-lg text-[#0B1222]">{t.services.ax.location}</p>
                   </div>
+                </div>
+                <div>
+                  <p className="text-xs text-[#0066FF]/60 uppercase tracking-wider font-medium mb-1">Service Duration</p>
+                  <p className="font-bold text-[#0B1222]">{t.services.ax.serviceDuration}</p>
                 </div>
               </div>
 
@@ -108,12 +112,12 @@ export default function Services() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  disabled
-                  className="px-8 py-4 bg-gray-300 text-gray-500 font-medium rounded-xl cursor-not-allowed"
+                <Link
+                  href="/checkout"
+                  className="px-8 py-4 bg-[#0B1222] text-white font-medium rounded-xl hover:bg-[#1a2435] transition-colors text-center"
                 >
-                  결제하기 (준비중)
-                </button>
+                  결제하기
+                </Link>
                 <a
                   href="https://open.kakao.com/o/sSp6Rcli"
                   target="_blank"
@@ -129,8 +133,8 @@ export default function Services() {
             <div>
               <div className="aspect-[4/3] bg-[#F7F9FC] rounded-3xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/ai-pt.jpeg"
-                  alt="AI PT 1:1 컨설팅 현장"
+                  src="/images/ai-pt-group.png"
+                  alt="AI PT 트레이닝 현장"
                   className="w-full h-full object-cover"
                 />
               </div>
