@@ -35,7 +35,7 @@ export default function About() {
             <div className="lg:col-span-1">
               <div className="aspect-[3/4] bg-[#F7F9FC] rounded-2xl overflow-hidden border border-gray-100">
                 <img
-                  src="/images/founder.jpg"
+                  src="/images/founder.png"
                   alt={t.about.founder.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
