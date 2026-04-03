@@ -12,7 +12,7 @@ export default function Contact() {
       <section className="py-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-[#0066FF] rounded-full mb-6" />
+            <div className="w-12 h-1 bg-[#1B2A4A] rounded-full mb-6" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0B1222] mb-6">
               {t.contact.title}
             </h1>
@@ -63,7 +63,7 @@ export default function Contact() {
               className="block bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all group"
             >
               <div className="flex flex-col items-start gap-4">
-                <div className="w-14 h-14 bg-[#0066FF] rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 bg-[#1B2A4A] rounded-2xl flex items-center justify-center">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -74,7 +74,7 @@ export default function Contact() {
                   </p>
                   <p className="text-gray-500 text-sm">010-4067-5392</p>
                 </div>
-                <span className="inline-flex items-center gap-1 text-[#0066FF] text-sm font-medium group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-[#2563EB] text-sm font-medium group-hover:gap-2 transition-all">
                   {isKo ? '전화하기' : 'Call Now'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -100,7 +100,7 @@ export default function Contact() {
                   </p>
                   <p className="text-gray-500 text-sm">dayfocuslab@gmail.com</p>
                 </div>
-                <span className="inline-flex items-center gap-1 text-[#0066FF] text-sm font-medium group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-[#2563EB] text-sm font-medium group-hover:gap-2 transition-all">
                   {isKo ? '이메일 보내기' : 'Send Email'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -128,7 +128,7 @@ export default function Contact() {
                     {isKo ? '비즈니스 네트워킹' : 'Business Networking'}
                   </p>
                 </div>
-                <span className="inline-flex items-center gap-1 text-[#0066FF] text-sm font-medium group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-[#2563EB] text-sm font-medium group-hover:gap-2 transition-all">
                   {isKo ? '프로필 보기' : 'View Profile'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -193,7 +193,7 @@ export default function Contact() {
           </div>
 
           {/* Tagline */}
-          <div className="mt-8 bg-gradient-to-br from-[#0066FF] to-[#0B1222] text-white p-10 rounded-3xl text-center">
+          <div className="mt-8 bg-gradient-to-br from-[#1B2A4A] to-[#0B1222] text-white p-10 rounded-3xl text-center">
             <p className="text-2xl font-bold mb-2">Day Focus Lab</p>
             <p className="text-blue-100">{t.footer.tagline}</p>
           </div>

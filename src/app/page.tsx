@@ -19,15 +19,15 @@ export default function Home() {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
             className="absolute -top-10 -right-20 w-[500px] h-[500px] rounded-full opacity-[0.07]"
-            style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
+            style={{ background: 'radial-gradient(circle, #1B2A4A 0%, transparent 70%)' }}
           />
           <div
             className="absolute top-1/3 -left-32 w-[400px] h-[400px] rounded-full opacity-[0.05]"
-            style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
+            style={{ background: 'radial-gradient(circle, #1B2A4A 0%, transparent 70%)' }}
           />
           <div
             className="absolute bottom-10 right-1/4 w-[300px] h-[300px] rounded-full opacity-[0.06]"
-            style={{ background: 'radial-gradient(circle, #0066FF 0%, transparent 70%)' }}
+            style={{ background: 'radial-gradient(circle, #1B2A4A 0%, transparent 70%)' }}
           />
         </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
           <div className="absolute top-[25%] right-[10%] animate-float-delay opacity-0 animate-fade-in animation-delay-1000">
             <div className="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-xl px-4 py-2.5 shadow-lg shadow-blue-500/5">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[#0066FF]" />
+                <div className="w-2 h-2 rounded-full bg-[#1B2A4A]" />
                 <span className="text-xs font-mono text-gray-600">1:1 & Group PT</span>
               </div>
             </div>
@@ -69,8 +69,8 @@ export default function Home() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <div className="opacity-0 animate-fade-in">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-sm text-[#0066FF] font-medium mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0066FF] animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 border border-blue-100 rounded-full text-sm text-[#2563EB] font-medium mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1B2A4A] animate-pulse" />
               AI Transformation Partner
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
               href="https://open.kakao.com/o/sSp6Rcli"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:border-[#0066FF] hover:text-[#0066FF] transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white border border-gray-200 text-gray-700 font-medium rounded-xl hover:border-[#1B2A4A] hover:text-[#2563EB] transition-all"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 3C6.48 3 2 6.58 2 10.9c0 2.78 1.86 5.22 4.65 6.6-.15.53-.54 1.91-.62 2.21-.1.37.14.36.29.26.12-.08 1.82-1.22 2.56-1.72.69.1 1.4.15 2.12.15 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/>
@@ -142,7 +142,7 @@ export default function Home() {
       <section className="py-24 bg-dot-grid" style={{ backgroundColor: '#F7F9FC' }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#0066FF] uppercase tracking-wider mb-4">Services</span>
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#2563EB] uppercase tracking-wider mb-4">Services</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#0B1222' }}>
               {t.services.title}
             </h2>
@@ -152,47 +152,47 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* AI PT - Featured */}
             <div className="card-glow relative bg-white p-8 rounded-2xl border border-gray-200 overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0066FF] to-[#00C2FF]" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1B2A4A] to-[#3B82F6]" />
               <div className="flex items-center gap-3 mb-6">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center relative pulse-ring"
-                  style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
+                  style={{ backgroundColor: 'rgba(27, 42, 74, 0.1)' }}
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6" fill="none" stroke="#1B2A4A" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <span className="px-2 py-0.5 bg-[#0066FF] text-white text-[10px] font-bold uppercase tracking-wider rounded">Main</span>
+                <span className="px-2 py-0.5 bg-[#1B2A4A] text-white text-[10px] font-bold uppercase tracking-wider rounded">Main</span>
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#0B1222' }}>{t.services.ax.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{t.services.ax.subtitle}</p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.services.ax.description}</p>
-              <p className="text-sm font-bold mt-4" style={{ color: '#0066FF' }}>{t.services.ax.price}</p>
+              <p className="text-sm font-bold mt-4" style={{ color: '#1B2A4A' }}>{t.services.ax.price}</p>
             </div>
 
             {/* Workshop */}
             <div className="card-glow bg-white p-8 rounded-2xl border border-gray-200">
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-                style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
+                style={{ backgroundColor: 'rgba(27, 42, 74, 0.1)' }}
               >
-                <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="#1B2A4A" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#0B1222' }}>{t.services.workshop.title}</h3>
               <p className="text-sm text-gray-500 mb-4">{t.services.workshop.subtitle}</p>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">{t.services.workshop.description}</p>
-              <p className="text-sm font-bold mt-4" style={{ color: '#0066FF' }}>{t.services.workshop.price}</p>
+              <p className="text-sm font-bold mt-4" style={{ color: '#1B2A4A' }}>{t.services.workshop.price}</p>
             </div>
 
             {/* Focus Space */}
             <div className="card-glow bg-white p-8 rounded-2xl border border-gray-200">
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-                style={{ backgroundColor: 'rgba(0, 102, 255, 0.1)' }}
+                style={{ backgroundColor: 'rgba(27, 42, 74, 0.1)' }}
               >
-                <svg className="w-6 h-6" fill="none" stroke="#0066FF" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="#1B2A4A" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 font-medium text-[#0066FF] hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 font-medium text-[#2563EB] hover:gap-3 transition-all"
             >
               {t.nav.contact === '문의' ? '서비스 자세히 보기' : 'View All Services'}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -220,7 +220,7 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#0066FF] uppercase tracking-wider mb-4">Process</span>
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#2563EB] uppercase tracking-wider mb-4">Process</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222]">
               {t.nav.contact === '문의' ? '이용 절차' : 'How It Works'}
             </h2>
@@ -248,12 +248,12 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative text-center group">
-                <div className="w-16 h-16 mx-auto mb-6 bg-blue-50 rounded-2xl flex items-center justify-center group-hover:bg-[#0066FF] transition-colors duration-300">
-                  <svg className="w-7 h-7 text-[#0066FF] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 mx-auto mb-6 bg-blue-50 rounded-2xl flex items-center justify-center group-hover:bg-[#1B2A4A] transition-colors duration-300">
+                  <svg className="w-7 h-7 text-[#2563EB] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                   </svg>
                 </div>
-                <span className="text-xs font-mono text-[#0066FF]/50 uppercase tracking-widest">{item.step}</span>
+                <span className="text-xs font-mono text-[#2563EB]/50 uppercase tracking-widest">{item.step}</span>
                 <h3 className="text-lg font-bold text-[#0B1222] mt-1 mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-500">{item.desc}</p>
                 {i < 2 && (
@@ -273,7 +273,7 @@ export default function Home() {
       <section className="py-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#0066FF] uppercase tracking-wider mb-4">Why Us</span>
+            <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs font-mono text-[#2563EB] uppercase tracking-wider mb-4">Why Us</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222] mb-4">
               {t.nav.contact === '문의' ? '왜 Day Focus Lab인가요?' : 'Why Day Focus Lab?'}
             </h2>
@@ -286,7 +286,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0066FF] to-[#0052CC] text-white rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#1B2A4A] to-[#132038] text-white rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
@@ -302,7 +302,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0066FF] to-[#0052CC] text-white rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#1B2A4A] to-[#132038] text-white rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
@@ -318,7 +318,7 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0066FF] to-[#0052CC] text-white rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#1B2A4A] to-[#132038] text-white rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -339,7 +339,7 @@ export default function Home() {
       {/* Mission Statement Section */}
       <section
         className="py-24 text-white relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #0066FF 0%, #0052CC 50%, #0B1222 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #1B2A4A 0%, #132038 50%, #0B1222 100%)' }}
       >
         {/* Decorative grid */}
         <div className="absolute inset-0 opacity-10"
@@ -359,7 +359,7 @@ export default function Home() {
             <Link
               href="/about"
               className="inline-block px-8 py-4 bg-white font-medium rounded-xl transition-all hover:bg-gray-100 hover:shadow-lg hover:shadow-white/20"
-              style={{ color: '#0066FF' }}
+              style={{ color: '#1B2A4A' }}
             >
               {t.nav.about}
             </Link>

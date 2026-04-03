@@ -50,7 +50,7 @@ function SuccessContent() {
     return (
       <section className="py-24 bg-[#F7F9FC]">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <div className="w-16 h-16 border-4 border-[#0066FF] border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+          <div className="w-16 h-16 border-4 border-[#1B2A4A] border-t-transparent rounded-full animate-spin mx-auto mb-6" />
           <p className="text-gray-600">{t.payment.success.verifying}</p>
         </div>
       </section>
@@ -70,7 +70,7 @@ function SuccessContent() {
           <p className="text-gray-600 mb-8">{errorMessage}</p>
           <Link
             href="/checkout"
-            className="inline-block px-6 py-3 bg-[#0066FF] text-white rounded-xl hover:bg-[#0052CC] transition-colors"
+            className="inline-block px-6 py-3 bg-[#1B2A4A] text-white rounded-xl hover:bg-[#132038] transition-colors"
           >
             {t.payment.success.retry}
           </Link>
@@ -97,7 +97,7 @@ function SuccessContent() {
             </div>
             <div className="flex justify-between items-center py-3">
               <span className="text-gray-500">{t.payment.success.amount}</span>
-              <span className="font-bold text-xl text-[#0066FF]">{amount.toLocaleString()}원</span>
+              <span className="font-bold text-xl text-[#1B2A4A]">{amount.toLocaleString()}원</span>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ function SuccessContent() {
             href="https://open.kakao.com/o/sSp6Rcli"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#0066FF] text-white font-medium rounded-xl hover:bg-[#0052CC] transition-colors"
+            className="px-8 py-4 bg-[#1B2A4A] text-white font-medium rounded-xl hover:bg-[#132038] transition-colors"
           >
             {t.payment.success.kakao}
           </a>
@@ -130,7 +130,7 @@ export default function PaymentSuccessPage() {
     <Suspense fallback={
       <section className="py-24 bg-[#F7F9FC]">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <div className="w-16 h-16 border-4 border-[#0066FF] border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+          <div className="w-16 h-16 border-4 border-[#1B2A4A] border-t-transparent rounded-full animate-spin mx-auto mb-6" />
           <p className="text-gray-500">로딩 중...</p>
         </div>
       </section>

@@ -23,7 +23,7 @@ export default function Terms() {
               <ol className="list-decimal pl-5 space-y-2">
                 <li>&quot;서비스&quot;란 회사가 제공하는 AI PT 컨설팅 서비스를 의미합니다.</li>
                 <li>&quot;이용자&quot;란 본 약관에 따라 회사가 제공하는 서비스를 이용하는 자를 말합니다.</li>
-                <li>&quot;AI PT&quot;란 직장인 및 사업자(자영업자)를 대상으로 AI 활용 역량 강화를 위해 제공하는 1:1 대면 퍼스널 트레이닝을 의미합니다.</li>
+                <li>&quot;AI PT&quot;란 직장인 및 사업자(자영업자)를 대상으로 AI 활용 역량 강화를 위해 제공하는 대면 퍼스널 트레이닝(1:1 PT 또는 그룹 PT)을 의미합니다.</li>
               </ol>
             </section>
 
@@ -40,7 +40,7 @@ export default function Terms() {
               <ol className="list-decimal pl-5 space-y-2">
                 <li>회사는 다음과 같은 서비스를 제공합니다.
                   <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>AI PT (AI 퍼스널 트레이닝): 1:1 대면 컨설팅</li>
+                    <li>AI PT (AI 퍼스널 트레이닝): 1:1 PT · 그룹 PT</li>
                     <li>대상: 직장인, 사업자(자영업자)</li>
                     <li>장소: 패스트파이브 성수 2호점 (서울)</li>
                   </ul>
@@ -122,7 +122,7 @@ export default function Terms() {
           </div>
 
           <div className="mt-12">
-            <Link href="/" className="text-sm text-gray-500 hover:text-[#0066FF] transition-colors">
+            <Link href="/" className="text-sm text-gray-500 hover:text-[#1B2A4A] transition-colors">
               &larr; 홈으로 돌아가기
             </Link>
           </div>

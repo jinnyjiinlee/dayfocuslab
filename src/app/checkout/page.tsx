@@ -52,7 +52,7 @@ function CheckoutContent() {
           <p className="text-gray-600 mb-6">{t.payment.checkout.invalidParams}</p>
           <Link
             href="/services"
-            className="inline-block px-6 py-3 bg-[#0066FF] text-white rounded-xl hover:bg-[#0052CC] transition-colors"
+            className="inline-block px-6 py-3 bg-[#1B2A4A] text-white rounded-xl hover:bg-[#132038] transition-colors"
           >
             {t.payment.checkout.goBack}
           </Link>
@@ -64,7 +64,7 @@ function CheckoutContent() {
   return (
     <section className="py-24 bg-[#F7F9FC]">
       <div className="max-w-2xl mx-auto px-6">
-        <div className="w-16 h-1 bg-[#0066FF] rounded-full mb-8" />
+        <div className="w-16 h-1 bg-[#1B2A4A] rounded-full mb-8" />
         <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#0B1222]">
           {t.payment.checkout.title}
         </h1>
@@ -81,7 +81,7 @@ function CheckoutContent() {
             </div>
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
               <span className="text-gray-500">{t.payment.checkout.amount}</span>
-              <span className="font-bold text-xl text-[#0066FF]">{amount.toLocaleString()}원</span>
+              <span className="font-bold text-xl text-[#1B2A4A]">{amount.toLocaleString()}원</span>
             </div>
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
               <span className="text-gray-500">{t.payment.checkout.serviceDuration}</span>
@@ -97,7 +97,7 @@ function CheckoutContent() {
               type="checkbox"
               checked={agreed}
               onChange={(e) => setAgreed(e.target.checked)}
-              className="w-5 h-5 text-[#0066FF] rounded border-gray-300 focus:ring-[#0066FF]"
+              className="w-5 h-5 text-[#1B2A4A] rounded border-gray-300 focus:ring-[#1B2A4A]"
             />
             <span className="text-sm text-gray-700">
               {t.payment.checkout.agreeTerms}
@@ -105,7 +105,7 @@ function CheckoutContent() {
             <Link
               href="/terms"
               target="_blank"
-              className="text-sm text-[#0066FF] hover:underline ml-auto"
+              className="text-sm text-[#1B2A4A] hover:underline ml-auto"
             >
               {t.payment.checkout.viewTerms}
             </Link>
@@ -118,7 +118,7 @@ function CheckoutContent() {
           disabled={!agreed || loading}
           className={`w-full py-4 rounded-xl font-bold text-lg transition-colors ${
             agreed && !loading
-              ? 'bg-[#0066FF] text-white hover:bg-[#0052CC]'
+              ? 'bg-[#1B2A4A] text-white hover:bg-[#132038]'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
         >

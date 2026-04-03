@@ -161,7 +161,7 @@ export default function Privacy() {
           </div>
 
           <div className="mt-12">
-            <Link href="/" className="text-sm text-gray-500 hover:text-[#0066FF] transition-colors">
+            <Link href="/" className="text-sm text-gray-500 hover:text-[#1B2A4A] transition-colors">
               &larr; 홈으로 돌아가기
             </Link>
           </div>

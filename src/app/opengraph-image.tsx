@@ -34,7 +34,7 @@ export default async function Image() {
             left: 0,
             right: 0,
             height: 5,
-            background: 'linear-gradient(90deg, #0066FF 0%, #00C2FF 100%)',
+            background: 'linear-gradient(90deg, #1B2A4A 0%, #3B82F6 100%)',
             display: 'flex',
           }}
         />
@@ -58,10 +58,10 @@ export default async function Image() {
             }}
           >
             <svg width="64" height="64" viewBox="0 0 100 100">
-              <polygon points="0,25 50,0 50,50 0,75" fill="#0066FF" />
-              <polygon points="50,0 100,25 100,75 50,50" fill="#0066FF" />
-              <polygon points="0,25 50,50 50,100 0,75" fill="#0066FF" opacity="0.7" />
-              <polygon points="50,50 100,75 100,100 50,100" fill="#0066FF" opacity="0.7" />
+              <polygon points="0,25 50,0 50,50 0,75" fill="#1B2A4A" />
+              <polygon points="50,0 100,25 100,75 50,50" fill="#1B2A4A" />
+              <polygon points="0,25 50,50 50,100 0,75" fill="#1B2A4A" opacity="0.7" />
+              <polygon points="50,50 100,75 100,100 50,100" fill="#1B2A4A" opacity="0.7" />
               <rect x="38" y="25" width="24" height="50" fill="white" />
             </svg>
           </div>
@@ -85,7 +85,7 @@ export default async function Image() {
             style={{
               fontSize: 28,
               fontWeight: 700,
-              color: '#0066FF',
+              color: '#1B2A4A',
               marginBottom: 16,
               display: 'flex',
             }}
@@ -114,7 +114,7 @@ export default async function Image() {
           >
             <div
               style={{
-                background: 'linear-gradient(135deg, #0066FF 0%, #0052CC 100%)',
+                background: 'linear-gradient(135deg, #1B2A4A 0%, #132038 100%)',
                 color: '#FFFFFF',
                 padding: '8px 20px',
                 borderRadius: 10,

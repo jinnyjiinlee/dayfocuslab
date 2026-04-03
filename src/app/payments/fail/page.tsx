@@ -38,7 +38,7 @@ function FailContent() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/checkout"
-            className="px-8 py-4 bg-[#0066FF] text-white font-medium rounded-xl hover:bg-[#0052CC] transition-colors"
+            className="px-8 py-4 bg-[#1B2A4A] text-white font-medium rounded-xl hover:bg-[#132038] transition-colors"
           >
             {t.payment.fail.retry}
           </Link>

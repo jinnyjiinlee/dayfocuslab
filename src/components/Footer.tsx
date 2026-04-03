@@ -56,16 +56,16 @@ export default function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 {t.nav.home}
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/services" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 {t.nav.services}
               </Link>
-              <Link href="/about" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/about" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 {t.nav.about}
               </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/contact" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 {t.nav.contact}
               </Link>
             </nav>
@@ -77,10 +77,10 @@ export default function Footer() {
               Legal
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/terms" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/terms" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 이용약관
               </Link>
-              <Link href="/privacy" className="text-gray-300 hover:text-[#0066FF] transition-colors text-sm">
+              <Link href="/privacy" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
                 개인정보처리방침
               </Link>
             </nav>

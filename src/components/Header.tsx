@@ -38,7 +38,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm font-medium text-gray-600 hover:text-[#0066FF] transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#0066FF] after:transition-all after:duration-200 hover:after:w-full"
+                className="relative text-sm font-medium text-gray-600 hover:text-[#2563EB] transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-[#1B2A4A] after:transition-all after:duration-200 hover:after:w-full"
               >
                 {link.label}
               </Link>
@@ -49,7 +49,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setLocale(locale === 'ko' ? 'en' : 'ko')}
-              className="text-sm font-medium px-3 py-1.5 border border-gray-200 rounded-full hover:border-[#0066FF] hover:text-[#0066FF] transition-colors duration-200"
+              className="text-sm font-medium px-3 py-1.5 border border-gray-200 rounded-full hover:border-[#1B2A4A] hover:text-[#2563EB] transition-colors duration-200"
             >
               {locale === 'ko' ? 'EN' : 'KO'}
             </button>
@@ -57,7 +57,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-600 hover:text-[#0066FF] transition-colors duration-200"
+              className="md:hidden p-2 text-gray-600 hover:text-[#2563EB] transition-colors duration-200"
               aria-label="Toggle menu"
             >
               <svg
@@ -94,7 +94,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-3 text-gray-600 hover:text-[#0066FF] transition-colors duration-200"
+                className="block py-3 text-gray-600 hover:text-[#2563EB] transition-colors duration-200"
               >
                 {link.label}
               </Link>
