@@ -149,25 +149,21 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Visual */}
             <div>
-              <div className="aspect-square bg-white rounded-3xl flex items-center justify-center relative overflow-hidden">
-                {/* Abstract geometric design */}
-                <div className="absolute inset-0">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-gradient-to-tr from-[#0066FF]/15 to-transparent" />
-                  <div className="absolute top-16 left-16 w-28 h-28 rounded-full border-2 border-[#0066FF]/15" />
-                  <div className="absolute bottom-12 right-16 w-36 h-36 rounded-full bg-[#0066FF]/8" />
-                  <div className="absolute top-20 right-24 w-12 h-12 rounded-full bg-[#0066FF]/12" />
-                  <div className="absolute bottom-28 left-24 w-16 h-16 rounded-full border-2 border-[#0066FF]/20" />
-                  {/* Horizontal lines */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-3 w-32">
-                    {Array.from({ length: 4 }).map((_, i) => (
-                      <div key={i} className="h-1 rounded-full bg-[#0066FF]/10" style={{ width: `${100 - i * 15}%` }} />
-                    ))}
-                  </div>
-                  {/* Center icon */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-2xl bg-[#0066FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/25">
+              <div className="aspect-[4/3] bg-white rounded-3xl flex items-center justify-center relative overflow-hidden border border-gray-100 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/5 to-[#00C2FF]/5" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-[#0066FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/25">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0B1222] mb-3">{t.services.workshop.title}</h3>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {t.services.workshop.features.map((feature: string, i: number) => (
+                      <span key={i} className="px-3 py-1.5 bg-[#0066FF]/8 text-[#0066FF] text-xs font-medium rounded-full">
+                        {feature}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -271,25 +267,21 @@ export default function Services() {
 
             {/* Visual */}
             <div>
-              <div className="aspect-square bg-[#F7F9FC] rounded-3xl flex items-center justify-center relative overflow-hidden">
-                {/* Abstract geometric design */}
-                <div className="absolute inset-0">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 rounded-full bg-gradient-to-bl from-[#0066FF]/18 to-[#0066FF]/3" />
-                  <div className="absolute top-10 right-14 w-20 h-20 rounded-full bg-[#0066FF]/10" />
-                  <div className="absolute bottom-14 left-10 w-28 h-28 rounded-full border-2 border-[#0066FF]/15" />
-                  <div className="absolute top-28 left-16 w-14 h-14 rounded-full bg-[#0066FF]/8" />
-                  <div className="absolute bottom-20 right-20 w-24 h-24 rounded-full border-2 border-[#0066FF]/12" />
-                  {/* Stacked rectangles */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-2">
-                    {Array.from({ length: 3 }).map((_, i) => (
-                      <div key={i} className="h-2 rounded-full bg-[#0066FF]/10" style={{ width: `${80 - i * 20}px`, marginLeft: `${i * 10}px` }} />
-                    ))}
-                  </div>
-                  {/* Center icon */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-2xl bg-[#0066FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/25">
+              <div className="aspect-[4/3] bg-[#F7F9FC] rounded-3xl flex items-center justify-center relative overflow-hidden border border-gray-100 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/5 to-transparent" />
+                <div className="relative z-10 text-center p-10">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-[#0066FF] flex items-center justify-center shadow-lg shadow-[#0066FF]/25">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0B1222] mb-3">{t.services.studycafe.title}</h3>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {t.services.studycafe.features.map((feature: string, i: number) => (
+                      <span key={i} className="px-3 py-1.5 bg-[#0066FF]/8 text-[#0066FF] text-xs font-medium rounded-full">
+                        {feature}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

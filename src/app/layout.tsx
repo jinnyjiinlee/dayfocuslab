@@ -17,13 +17,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Day Focus Lab | 당신의 하루에 집중하다",
-  description: "Day Focus Lab은 AI Transformation 컨설팅, 집중 환경 설계, 개인 코칭을 통해 당신의 하루를 가장 가치 있게 만듭니다.",
-  keywords: ["AI 컨설팅", "스터디카페", "코칭", "생산성", "집중", "성장"],
+  description: "AI PT(퍼스널 트레이닝)로 업무에 AI를 도입하세요. 대면 1:1·그룹 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
+  keywords: ["AI PT", "AI 트레이닝", "업무 자동화", "AX 특강", "포커스 스페이스", "AI Transformation"],
   openGraph: {
     title: "Day Focus Lab | 당신의 하루에 집중하다",
-    description: "집중이 성장이 됩니다. AI 컨설팅, 스터디카페, 코칭 서비스를 제공합니다.",
+    description: "AI PT로 업무를 혁신하세요. 대면 1:1·그룹 AI 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
     type: "website",
     locale: "ko_KR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Day Focus Lab | 당신의 하루에 집중하다",
+    description: "AI PT로 업무를 혁신하세요. 대면 1:1·그룹 AI 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
   },
 };
 
