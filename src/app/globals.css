@@ -3,12 +3,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0B1222;
-  --primary: #1B2A4A;
-  --primary-light: #E8EDF5;
-  --primary-dark: #132038;
-  --accent: #2563EB;
-  --navy: #0B1222;
+  --foreground: #050A34;
+  --primary: #050A34;
+  --primary-light: #AFE9FD;
+  --primary-dark: #020151;
+  --accent: #085CF0;
+  --accent-purple: #713FFF;
+  --navy: #050A34;
   --gray-50: #F7F9FC;
   --gray-100: #EEF1F6;
   --gray-200: #E5E8EB;
@@ -47,7 +48,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--gray-50);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,19 +61,23 @@ html {
 }
 
 ::selection {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #fff;
 }
 
 *:focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -103,40 +108,29 @@ html {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animation-delay-200 {
-  animation-delay: 0.2s;
-}
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+.animation-delay-1000 { animation-delay: 1.0s; }
+.animation-delay-1200 { animation-delay: 1.2s; }
 
-.animation-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animation-delay-600 {
-  animation-delay: 0.6s;
-}
-
-.animation-delay-800 {
-  animation-delay: 0.8s;
-}
-
-.animation-delay-1000 {
-  animation-delay: 1.0s;
-}
-
-/* Gradient text */
+/* ==========================================
+   GRADIENT TEXT
+   ========================================== */
 .text-gradient {
-  background: linear-gradient(135deg, #1B2A4A 0%, #2563EB 50%, #1B2A4A 100%);
+  background: linear-gradient(135deg, #050A34 0%, #085CF0 50%, #050A34 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -149,39 +143,29 @@ html {
   50% { background-position: 100% 50%; }
 }
 
-/* Glow button */
+/* Hero gradient text - for dark backgrounds */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #085CF0 0%, #713FFF 40%, #AFE9FD 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
 .btn-glow {
   position: relative;
-  background: linear-gradient(135deg, #1B2A4A 0%, #2563EB 100%);
-  box-shadow: 0 0 20px rgba(27, 42, 74, 0.3), 0 0 60px rgba(37, 99, 235, 0.1);
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #050A34 0%, #085CF0 100%);
+  box-shadow: 0 4px 20px rgba(27, 42, 74, 0.25), 0 0 60px rgba(37, 99, 235, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-glow:hover {
-  box-shadow: 0 0 30px rgba(27, 42, 74, 0.5), 0 0 80px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 8px 40px rgba(27, 42, 74, 0.35), 0 0 80px rgba(37, 99, 235, 0.15);
   transform: translateY(-2px);
-}
-
-.btn-glow::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, #1B2A4A, #2563EB, #1B2A4A);
-  background-size: 300% 300%;
-  animation: borderGlow 3s ease-in-out infinite;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.btn-glow:hover::before {
-  opacity: 1;
-}
-
-@keyframes borderGlow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 /* Shimmer effect */
@@ -197,7 +181,7 @@ html {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
   animation: shimmer 3s ease-in-out infinite;
 }
 
@@ -206,9 +190,22 @@ html {
   100% { left: 100%; }
 }
 
-/* Card glow on hover */
+/* ==========================================
+   GLASS CARD
+   ========================================== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================
+   CARD HOVER
+   ========================================== */
 .card-glow {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-glow:hover {
@@ -217,15 +214,17 @@ html {
   transform: translateY(-4px);
 }
 
-/* Floating animation */
+/* ==========================================
+   FLOATING ANIMATION
+   ========================================== */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(2deg); }
+  50% { transform: translateY(-14px) rotate(1.5deg); }
 }
 
 .animate-float {
@@ -240,7 +239,54 @@ html {
   animation: float 3.5s ease-in-out 1s infinite;
 }
 
-/* Pulse ring */
+/* ==========================================
+   MESH BACKGROUND ANIMATION
+   ========================================== */
+@keyframes mesh1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes mesh2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 15px) scale(1.03); }
+  66% { transform: translate(15px, -25px) scale(0.97); }
+}
+
+@keyframes mesh3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, 20px) scale(1.04); }
+}
+
+.animate-mesh-1 {
+  animation: mesh1 12s ease-in-out infinite;
+}
+
+.animate-mesh-2 {
+  animation: mesh2 15s ease-in-out infinite;
+}
+
+.animate-mesh-3 {
+  animation: mesh3 10s ease-in-out infinite;
+}
+
+/* ==========================================
+   SCROLL DOT
+   ========================================== */
+@keyframes scrollDot {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(6px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-scroll-dot {
+  animation: scrollDot 1.5s ease-in-out infinite;
+}
+
+/* ==========================================
+   PULSE RING
+   ========================================== */
 @keyframes pulseRing {
   0% { transform: scale(1); opacity: 0.4; }
   100% { transform: scale(1.8); opacity: 0; }
@@ -251,11 +297,13 @@ html {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 2px solid #1B2A4A;
+  border: 2px solid #050A34;
   animation: pulseRing 2s ease-out infinite;
 }
 
-/* Grid background pattern */
+/* ==========================================
+   BACKGROUND PATTERNS
+   ========================================== */
 .bg-grid {
   background-image:
     linear-gradient(rgba(27, 42, 74, 0.03) 1px, transparent 1px),
@@ -263,8 +311,14 @@ html {
   background-size: 40px 40px;
 }
 
-/* Dot grid pattern */
 .bg-dot-grid {
   background-image: radial-gradient(circle, rgba(27, 42, 74, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+/* ==========================================
+   TABULAR NUMS for counters
+   ========================================== */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }

@@ -13,6 +13,14 @@ export const translations = {
       subtitle: '집중이 성장이 됩니다',
       description: 'AI PT를 통해 업무에 AI를 도입하고, 반복 업무를 자동화하세요. 1:1 PT부터 그룹 PT까지, 당신의 성장을 돕습니다.',
       cta: 'AI PT 알아보기',
+      freeConsultation: '무료 상담하기',
+    },
+    stats: {
+      automation: '업무 자동화 달성',
+      personalizedTraining: '맞춤 대면 PT',
+      locations: '개 지점',
+      focusSpaces: '포커스 스페이스 운영',
+      alwaysOpen: '상시 운영',
     },
     services: {
       title: '서비스',
@@ -54,6 +62,38 @@ export const translations = {
         description: '포커스할 수 있는 최적의 공간을 제공합니다. 조용하고 쾌적한 환경에서 당신의 목표에 온전히 몰입하세요.',
         features: ['집중을 위한 최적의 환경', '24시간 운영', '개인 공간 및 미팅룸', '프리미엄 편의시설'],
       },
+      viewAll: '서비스 자세히 보기',
+    },
+    process: {
+      title: '이용 절차',
+      steps: [
+        { title: '무료 설문지 작성', desc: '현재 업무 현황과 AI 도입 목표를 알려주세요' },
+        { title: '무료 상담 진행', desc: '설문 내용을 바탕으로 맞춤 상담을 진행합니다' },
+        { title: '결제 후 PT 시작', desc: '1:1 또는 그룹 AI PT로 업무 혁신을 시작하세요' },
+      ],
+    },
+    whyUs: {
+      title: '왜 Day Focus Lab인가요?',
+      subtitle: '실전 경험을 바탕으로 한 AI 트레이닝과 자동화 솔루션을 제공합니다',
+      items: [
+        {
+          title: '검증된 실무 경험',
+          desc: '코르카 AX 엔지니어, 코드잇 운영 기획을 거쳐 스터디카페 2개 지점을 직접 운영하며 AI로 업무 90%를 자동화한 실전 경험',
+        },
+        {
+          title: '맞춤형 대면 트레이닝',
+          desc: '온라인 강의가 아닌 대면 1:1 또는 그룹 PT로 당신의 실제 업무 환경에 맞는 AI 활용법을 직접 코칭합니다',
+        },
+        {
+          title: '즉시 적용 가능한 솔루션',
+          desc: '이론이 아닌 실전. PT 직후부터 바로 업무에 적용할 수 있는 AI 자동화 워크플로우와 도구를 제공합니다',
+        },
+      ],
+    },
+    cta: {
+      title: '궁금한 점이 있으시면 언제든 문의해주세요',
+      subtitle: 'AI로 업무를 혁신하고 싶다면, 지금 바로 무료 상담을 신청하세요.',
+      kakao: '카카오톡 상담',
     },
     about: {
       title: '회사소개',
@@ -185,6 +225,14 @@ export const translations = {
       subtitle: 'Focus Becomes Growth',
       description: 'Day Focus Lab helps your growth through AI Transformation consulting and focus spaces.',
       cta: 'Explore Services',
+      freeConsultation: 'Free Consultation',
+    },
+    stats: {
+      automation: 'Automation Achieved',
+      personalizedTraining: 'Personalized Training',
+      locations: ' Locations',
+      focusSpaces: 'Focus Spaces Operating',
+      alwaysOpen: 'Always Open',
     },
     services: {
       title: 'Services',
@@ -226,6 +274,38 @@ export const translations = {
         description: 'We provide the optimal space for deep focus. Fully immerse yourself in your goals in a quiet and comfortable environment.',
         features: ['Optimal Environment for Focus', '24/7 Operation', 'Private Spaces & Meeting Rooms', 'Premium Amenities'],
       },
+      viewAll: 'View All Services',
+    },
+    process: {
+      title: 'How It Works',
+      steps: [
+        { title: 'Free Survey', desc: 'Tell us about your workflow and AI goals' },
+        { title: 'Free Consultation', desc: 'We design a personalized training plan' },
+        { title: 'Start AI PT', desc: 'Begin your AI transformation journey' },
+      ],
+    },
+    whyUs: {
+      title: 'Why Day Focus Lab?',
+      subtitle: 'Real-world experience backed AI training and automation solutions',
+      items: [
+        {
+          title: 'Proven Experience',
+          desc: 'From AX engineer at Korka to operating 2 focus spaces with 90% AI automation - proven, hands-on expertise',
+        },
+        {
+          title: 'Personalized In-Person Training',
+          desc: 'Not online courses but face-to-face 1:1 or group PT, coaching AI skills tailored to your actual work environment',
+        },
+        {
+          title: 'Ready-to-Apply Solutions',
+          desc: 'Practice, not theory. Get AI automation workflows and tools you can apply to your work immediately after training',
+        },
+      ],
+    },
+    cta: {
+      title: 'Feel free to reach out with any questions',
+      subtitle: 'Ready to transform your work with AI? Schedule a free consultation now.',
+      kakao: 'KakaoTalk',
     },
     about: {
       title: 'About Us',

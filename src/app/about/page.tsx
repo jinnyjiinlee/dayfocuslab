@@ -9,11 +9,11 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-24 bg-[#F7F9FC]">
+      <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-[#1B2A4A] rounded-full mb-6" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0B1222] mb-6">
+            <div className="w-12 h-1 bg-[#050A34] rounded-full mb-6" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#050A34] mb-6">
               {t.about.title}
             </h1>
             <p className="text-xl text-gray-500 leading-relaxed">
@@ -24,10 +24,10 @@ export default function About() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-[96px] pb-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222] mb-4">{t.about.founder.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-4">{t.about.founder.title}</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -40,7 +40,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-[#2563EB]"><svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>';
+                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-[#085CF0]"><svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div>';
                   }}
                 />
               </div>
@@ -50,18 +50,18 @@ export default function About() {
             <div className="lg:col-span-2">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#0B1222] mb-2">{t.about.founder.name}</h3>
-                  <p className="text-lg text-[#2563EB] font-medium mb-4">{t.about.founder.role}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#050A34] mb-2">{t.about.founder.name}</h3>
+                  <p className="text-lg text-[#085CF0] font-medium mb-4">{t.about.founder.role}</p>
                   <p className="text-gray-600 leading-relaxed">{t.about.founder.bio}</p>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-bold text-[#0B1222] mb-3">Expertise</h4>
+                  <h4 className="text-lg font-bold text-[#050A34] mb-3">Expertise</h4>
                   <div className="flex flex-wrap gap-2">
                     {t.about.founder.expertise.map((skill: string, index: number) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-[#1B2A4A] text-white text-sm rounded-full"
+                        className="px-4 py-2 bg-[#050A34] text-white text-sm rounded-full"
                       >
                         {skill}
                       </span>
@@ -70,11 +70,11 @@ export default function About() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-bold text-[#0B1222] mb-3">Experience</h4>
+                  <h4 className="text-lg font-bold text-[#050A34] mb-3">Experience</h4>
                   <ul className="space-y-2">
                     {t.about.founder.experience.map((exp: string, index: number) => (
                       <li key={index} className="text-gray-600 flex items-start">
-                        <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-[#1B2A4A] rounded-full flex-shrink-0" />
+                        <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-[#050A34] rounded-full flex-shrink-0" />
                         <span>{exp}</span>
                       </li>
                     ))}
@@ -86,7 +86,7 @@ export default function About() {
                     href={t.about.founder.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0A66C2] text-white rounded-full hover:bg-[#004182] transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#085CF0] text-white rounded-full hover:bg-[#004182] transition-colors"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -101,17 +101,17 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-[#F7F9FC]">
+      <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Mission */}
             <div className="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
-              <div className="w-14 h-14 bg-[#1B2A4A] text-white rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-[#050A34] text-white rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0B1222] mb-4">{t.about.mission.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#050A34] mb-4">{t.about.mission.title}</h2>
               <p className="text-gray-600 leading-relaxed">
                 {t.about.mission.description}
               </p>
@@ -119,13 +119,13 @@ export default function About() {
 
             {/* Vision */}
             <div className="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
-              <div className="w-14 h-14 bg-[#1B2A4A] text-white rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-[#050A34] text-white rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#0B1222] mb-4">{t.about.vision.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#050A34] mb-4">{t.about.vision.title}</h2>
               <p className="text-gray-600 leading-relaxed">
                 {t.about.vision.description}
               </p>
@@ -135,7 +135,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-gradient-to-br from-[#1B2A4A] to-[#0B1222] text-white">
+      <section className="py-24 bg-gradient-to-br from-[#050A34] to-[#050A34] text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.about.values.title}</h2>
@@ -144,7 +144,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.about.values.items.map((value, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white text-[#2563EB] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-white text-[#085CF0] rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold">{index + 1}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3">{value.title}</h3>
@@ -158,11 +158,11 @@ export default function About() {
       </section>
 
       {/* Company Story */}
-      <section className="py-24 bg-white">
+      <section className="pt-[96px] pb-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="w-12 h-1 bg-[#1B2A4A] rounded-full mx-auto mb-8" />
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222] mb-8">Day Focus Lab</h2>
+            <div className="w-12 h-1 bg-[#050A34] rounded-full mx-auto mb-8" />
+            <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-8">Day Focus Lab</h2>
             <div className="space-y-6 text-gray-600 leading-relaxed text-left">
               <p>
                 Day Focus Lab은 &quot;집중&quot;이라는 단순하지만 강력한 가치에서 시작되었습니다.
@@ -182,10 +182,10 @@ export default function About() {
       </section>
 
       {/* Focus Space Locations */}
-      <section className="py-24 bg-[#F7F9FC]">
+      <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222] mb-4">{t.about.focusSpace.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-4">{t.about.focusSpace.title}</h2>
             <p className="text-lg text-gray-500">{t.about.focusSpace.subtitle}</p>
           </div>
 
@@ -194,7 +194,7 @@ export default function About() {
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-[#0B1222]">{t.about.focusSpace.location1.name}</h3>
+                  <h3 className="text-xl font-bold text-[#050A34]">{t.about.focusSpace.location1.name}</h3>
                   <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
                     {t.about.focusSpace.location1.status}
                   </span>
@@ -210,7 +210,7 @@ export default function About() {
                     href={t.about.focusSpace.location1.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#2563EB] hover:underline"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#085CF0] hover:underline"
                   >
                     웹사이트 방문
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -239,7 +239,7 @@ export default function About() {
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-[#0B1222]">{t.about.focusSpace.location2.name}</h3>
+                  <h3 className="text-xl font-bold text-[#050A34]">{t.about.focusSpace.location2.name}</h3>
                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
                     {t.about.focusSpace.location2.status}
                   </span>
@@ -269,7 +269,7 @@ export default function About() {
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-[#0B1222]">{t.about.focusSpace.location3.name}</h3>
+                  <h3 className="text-xl font-bold text-[#050A34]">{t.about.focusSpace.location3.name}</h3>
                   <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
                     {t.about.focusSpace.location3.status}
                   </span>
@@ -285,14 +285,14 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="pt-[96px] pb-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0B1222] mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-6">
             {t.contact.subtitle}
           </h2>
           <Link
             href="/contact"
-            className="inline-block px-8 py-4 bg-[#1B2A4A] text-white font-medium rounded-full hover:bg-[#132038] transition-colors"
+            className="inline-block px-8 py-4 bg-[#050A34] text-white font-medium rounded-full hover:bg-[#020151] transition-colors"
           >
             {t.nav.contact}
           </Link>

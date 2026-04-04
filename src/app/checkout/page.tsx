@@ -47,12 +47,12 @@ function CheckoutContent() {
 
   if (!isValid) {
     return (
-      <section className="py-24 bg-white">
+      <section className="pt-[96px] pb-24 bg-white">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <p className="text-gray-600 mb-6">{t.payment.checkout.invalidParams}</p>
           <Link
             href="/services"
-            className="inline-block px-6 py-3 bg-[#1B2A4A] text-white rounded-xl hover:bg-[#132038] transition-colors"
+            className="inline-block px-6 py-3 bg-[#050A34] text-white rounded-xl hover:bg-[#020151] transition-colors"
           >
             {t.payment.checkout.goBack}
           </Link>
@@ -62,30 +62,30 @@ function CheckoutContent() {
   }
 
   return (
-    <section className="py-24 bg-[#F7F9FC]">
+    <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
       <div className="max-w-2xl mx-auto px-6">
-        <div className="w-16 h-1 bg-[#1B2A4A] rounded-full mb-8" />
-        <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#0B1222]">
+        <div className="w-16 h-1 bg-[#050A34] rounded-full mb-8" />
+        <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#050A34]">
           {t.payment.checkout.title}
         </h1>
         <p className="text-gray-500 mb-10">{t.payment.checkout.subtitle}</p>
 
         {/* Order Summary */}
         <div className="bg-white rounded-2xl p-8 shadow-sm mb-8">
-          <h2 className="font-bold text-lg mb-6 text-[#0B1222]">{t.payment.checkout.serviceName}</h2>
+          <h2 className="font-bold text-lg mb-6 text-[#050A34]">{t.payment.checkout.serviceName}</h2>
 
           <div className="space-y-4">
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
               <span className="text-gray-500">{t.payment.checkout.hours}</span>
-              <span className="font-semibold text-[#0B1222]">{hours}시간</span>
+              <span className="font-semibold text-[#050A34]">{hours}시간</span>
             </div>
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
               <span className="text-gray-500">{t.payment.checkout.amount}</span>
-              <span className="font-bold text-xl text-[#1B2A4A]">{amount.toLocaleString()}원</span>
+              <span className="font-bold text-xl text-[#050A34]">{amount.toLocaleString()}원</span>
             </div>
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
               <span className="text-gray-500">{t.payment.checkout.serviceDuration}</span>
-              <span className="font-semibold text-[#0B1222]">{t.payment.checkout.serviceDurationValue}</span>
+              <span className="font-semibold text-[#050A34]">{t.payment.checkout.serviceDurationValue}</span>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ function CheckoutContent() {
               type="checkbox"
               checked={agreed}
               onChange={(e) => setAgreed(e.target.checked)}
-              className="w-5 h-5 text-[#1B2A4A] rounded border-gray-300 focus:ring-[#1B2A4A]"
+              className="w-5 h-5 text-[#050A34] rounded border-gray-300 focus:ring-[#050A34]"
             />
             <span className="text-sm text-gray-700">
               {t.payment.checkout.agreeTerms}
@@ -105,7 +105,7 @@ function CheckoutContent() {
             <Link
               href="/terms"
               target="_blank"
-              className="text-sm text-[#1B2A4A] hover:underline ml-auto"
+              className="text-sm text-[#050A34] hover:underline ml-auto"
             >
               {t.payment.checkout.viewTerms}
             </Link>
@@ -118,7 +118,7 @@ function CheckoutContent() {
           disabled={!agreed || loading}
           className={`w-full py-4 rounded-xl font-bold text-lg transition-colors ${
             agreed && !loading
-              ? 'bg-[#1B2A4A] text-white hover:bg-[#132038]'
+              ? 'bg-[#050A34] text-white hover:bg-[#020151]'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
         >
@@ -136,7 +136,7 @@ function CheckoutContent() {
 export default function CheckoutPage() {
   return (
     <Suspense fallback={
-      <section className="py-24 bg-[#F7F9FC]">
+      <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <p className="text-gray-500">로딩 중...</p>
         </div>

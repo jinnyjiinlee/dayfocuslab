@@ -8,7 +8,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="relative bg-[#0B1222] text-white">
+    <footer className="relative bg-[#050A34] text-white">
       {/* Subtle top gradient border */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
 
@@ -29,7 +29,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 hover:bg-[#0A66C2] rounded-lg flex items-center justify-center transition-colors"
+                className="w-9 h-9 bg-gray-800 hover:bg-[#085CF0] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -56,16 +56,16 @@ export default function Footer() {
               Navigation
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 {t.nav.home}
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/services" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 {t.nav.services}
               </Link>
-              <Link href="/about" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/about" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 {t.nav.about}
               </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/contact" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 {t.nav.contact}
               </Link>
             </nav>
@@ -77,10 +77,10 @@ export default function Footer() {
               Legal
             </h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/terms" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/terms" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 이용약관
               </Link>
-              <Link href="/privacy" className="text-gray-300 hover:text-[#2563EB] transition-colors text-sm">
+              <Link href="/privacy" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
                 개인정보처리방침
               </Link>
             </nav>
@@ -105,7 +105,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-gray-800/50">
           <p className="text-gray-500 text-sm text-center">
-            &copy; 2025-2026 Day Focus Lab. All rights reserved.
+            &copy; 2025-{new Date().getFullYear()} Day Focus Lab. All rights reserved.
           </p>
         </div>
       </div>
