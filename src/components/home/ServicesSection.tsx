@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import FadeIn from '@/components/FadeIn';
-import DFLSymbol from '@/components/DFLSymbol';
+import FadeIn from '@/components/shared/FadeIn';
+import DFLSymbol from '@/components/brand/DFLSymbol';
 import type { Translations } from '@/lib/i18n';
 
 export default function ServicesSection({ t, ko }: { t: Translations; ko: boolean }) {

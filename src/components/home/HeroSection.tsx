@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useInView } from '@/components/useInView';
-import AnimatedCounter from '@/components/AnimatedCounter';
-import DFLSymbol from '@/components/DFLSymbol';
+import { useInView } from '@/hooks/useInView';
+import AnimatedCounter from '@/components/shared/AnimatedCounter';
+import DFLSymbol from '@/components/brand/DFLSymbol';
 import type { Translations } from '@/lib/i18n';
 
 export default function HeroSection({ t, ko }: { t: Translations; ko: boolean }) {

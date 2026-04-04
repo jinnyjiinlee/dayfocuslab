@@ -2,10 +2,10 @@
 
 import { useLanguage } from '@/components/LanguageContext';
 import Link from 'next/link';
-import PageHero from '@/components/PageHero';
-import FeatureList from '@/components/FeatureList';
-import InfoGrid from '@/components/InfoGrid';
-import CTASection from '@/components/CTASection';
+import PageHero from '@/components/shared/PageHero';
+import FeatureList from '@/components/shared/FeatureList';
+import InfoGrid from '@/components/shared/InfoGrid';
+import CTASection from '@/components/shared/CTASection';
 
 function ServiceSection({ children, bg = 'bg-white' }: { children: React.ReactNode; bg?: string }) {
   return (

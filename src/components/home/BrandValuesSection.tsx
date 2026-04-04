@@ -1,6 +1,6 @@
 'use client';
 
-import FadeIn from '@/components/FadeIn';
+import FadeIn from '@/components/shared/FadeIn';
 
 const VALUES = [
   { num: '01', keyword: 'DAY', color: '#085CF0' },

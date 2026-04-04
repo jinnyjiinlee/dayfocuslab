@@ -1,6 +1,6 @@
 'use client';
 
-import FadeIn from '@/components/FadeIn';
+import FadeIn from '@/components/shared/FadeIn';
 import type { Translations } from '@/lib/i18n';
 
 const CARDS = [

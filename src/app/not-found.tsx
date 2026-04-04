@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import DFLSymbol from '@/components/DFLSymbol';
+import DFLSymbol from '@/components/brand/DFLSymbol';
 
 export default function NotFound() {
   return (

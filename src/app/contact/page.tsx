@@ -1,8 +1,8 @@
 'use client';
 
 import { useLanguage } from '@/components/LanguageContext';
-import PageHero from '@/components/PageHero';
-import ContactCard from '@/components/ContactCard';
+import PageHero from '@/components/shared/PageHero';
+import ContactCard from '@/components/shared/ContactCard';
 
 export default function Contact() {
   const { t, locale } = useLanguage();

@@ -1,8 +1,8 @@
 'use client';
 
 import { useLanguage } from '@/components/LanguageContext';
-import DFLSymbol from '@/components/DFLSymbol';
-import CTASection from '@/components/CTASection';
+import DFLSymbol from '@/components/brand/DFLSymbol';
+import CTASection from '@/components/shared/CTASection';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import BrandValuesSection from '@/components/home/BrandValuesSection';

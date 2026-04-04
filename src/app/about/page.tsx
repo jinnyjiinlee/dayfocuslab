@@ -2,9 +2,9 @@
 
 import { useLanguage } from '@/components/LanguageContext';
 import Link from 'next/link';
-import DFLSymbol from '@/components/DFLSymbol';
-import PageHero from '@/components/PageHero';
-import LocationCard from '@/components/LocationCard';
+import DFLSymbol from '@/components/brand/DFLSymbol';
+import PageHero from '@/components/shared/PageHero';
+import LocationCard from '@/components/shared/LocationCard';
 
 export default function About() {
   const { t } = useLanguage();
