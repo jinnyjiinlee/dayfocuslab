@@ -13,7 +13,7 @@ export default function About() {
       <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <DFLSymbol size={24} color="#050A34" secondaryColor="#085CF0" className="mb-6" />
+            <DFLSymbol size={28} variant="blue" className="mb-6" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#050A34] mb-6">
               {t.about.title}
             </h1>
@@ -162,7 +162,7 @@ export default function About() {
       <section className="pt-[96px] pb-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="flex justify-center mb-8"><DFLSymbol size={24} color="#050A34" secondaryColor="#085CF0" /></div>
+            <div className="flex justify-center mb-8"><DFLSymbol size={28} variant="blue" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-8">Day Focus Lab</h2>
             <div className="space-y-6 text-gray-600 leading-relaxed text-left">
               <p>

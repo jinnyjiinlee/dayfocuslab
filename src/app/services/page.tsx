@@ -13,7 +13,7 @@ export default function Services() {
       <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <DFLSymbol size={24} color="#050A34" secondaryColor="#085CF0" className="mb-8" />
+            <DFLSymbol size={28} variant="blue" className="mb-8" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-[#050A34]">
               {t.services.title}
             </h1>
@@ -104,7 +104,7 @@ export default function Services() {
               <ul className="space-y-3 mb-8">
                 {t.services.ax.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
+                    <DFLSymbol size={14} variant="blue" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -211,7 +211,7 @@ export default function Services() {
               <ul className="space-y-3 mb-8">
                 {t.services.workshop.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
+                    <DFLSymbol size={14} variant="blue" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -253,7 +253,7 @@ export default function Services() {
               <ul className="space-y-3">
                 {t.services.studycafe.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
+                    <DFLSymbol size={14} variant="blue" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}

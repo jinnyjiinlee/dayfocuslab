@@ -14,7 +14,7 @@ export default function Footer() {
       {/* Symbol divider */}
       <div className="absolute inset-x-0 top-0 flex flex-col items-center" aria-hidden="true">
         <div className="-translate-y-1/2 bg-[#050A34] px-4">
-          <DFLSymbol size={20} color="#085CF0" secondaryColor="#713FFF" />
+          <DFLSymbol size={18} variant="blue" />
         </div>
         <div className="absolute top-1/2 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
       </div>
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 md:mt-16 pt-8 border-t border-gray-800/50">
           <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
-            <DFLSymbol size={12} color="#4B5563" />
+            <DFLSymbol size={12} variant="blue" className="opacity-40" />
             <p>&copy; 2025-{new Date().getFullYear()} DayFocusLab. All rights reserved.</p>
           </div>
         </div>

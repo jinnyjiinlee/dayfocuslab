@@ -51,14 +51,14 @@ export default function Home() {
 
         {/* Symbol watermark */}
         <div className="absolute right-[-5%] top-[50%] -translate-y-1/2 opacity-[0.04] hidden lg:block" aria-hidden="true">
-          <DFLSymbol size={500} color="#085CF0" secondaryColor="#713FFF" />
+          <DFLSymbol size={500} variant="blue" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-32">
           <div className="max-w-3xl">
             <div className="opacity-0 animate-fade-in">
               <span className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-sm text-[#AFE9FD] font-semibold mb-10">
-                <DFLSymbol size={14} color="#AFE9FD" secondaryColor="#085CF0" />
+                <DFLSymbol size={14} variant="skyblue" />
                 AI Transformation Partner
               </span>
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* Section Divider */}
       <div className="flex justify-center py-6 bg-white" aria-hidden="true">
-        <DFLSymbol size={20} color="#E5E8EB" />
+        <DFLSymbol size={20} variant="blue" className="opacity-30" />
       </div>
 
       {/* ===== SERVICES - B2B First, then B2C ===== */}
@@ -169,7 +169,7 @@ export default function Home() {
                   {t.services.enterprise.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white/[0.05] rounded-2xl p-4">
                       <div className="shrink-0 mt-0.5">
-                        <DFLSymbol size={18} color="#AFE9FD" secondaryColor="#085CF0" />
+                        <DFLSymbol size={18} variant="skyblue" />
                       </div>
                       <p className="text-white/80 text-sm font-medium leading-snug">{feature}</p>
                     </div>
@@ -277,7 +277,7 @@ export default function Home() {
 
       {/* Section Divider */}
       <div className="flex justify-center py-6 bg-white" aria-hidden="true">
-        <DFLSymbol size={20} color="#E5E8EB" />
+        <DFLSymbol size={20} variant="blue" className="opacity-30" />
       </div>
 
       {/* ===== PROCESS - 4 Steps ===== */}
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="absolute inset-0" aria-hidden="true"
           style={{ background: 'radial-gradient(ellipse at 20% 50%, rgba(8,92,240,0.2) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(113,63,255,0.15) 0%, transparent 50%)' }} />
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04]" aria-hidden="true">
-          <DFLSymbol size={400} color="#085CF0" secondaryColor="#713FFF" />
+          <DFLSymbol size={400} variant="blue" />
         </div>
 
         <FadeIn className="relative z-10 max-w-4xl mx-auto px-6 text-center">

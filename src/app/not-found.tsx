@@ -6,11 +6,11 @@ export default function NotFound() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#050A34] text-white px-6 pt-[72px] relative overflow-hidden">
       {/* Background symbol */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03]" aria-hidden="true">
-        <DFLSymbol size={500} color="#085CF0" secondaryColor="#713FFF" />
+        <DFLSymbol size={500} variant="blue" />
       </div>
 
       <div className="relative z-10 text-center max-w-md">
-        <DFLSymbol size={64} color="#085CF0" secondaryColor="#713FFF" className="mx-auto mb-8" />
+        <DFLSymbol size={64} variant="blue" className="mx-auto mb-8" />
         <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tight">404</h1>
         <p className="text-white/60 text-lg mb-8">
           페이지를 찾을 수 없습니다

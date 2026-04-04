@@ -16,19 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Day Focus Lab | 당신의 하루에 집중하다",
-  description: "AI PT(퍼스널 트레이닝)로 업무에 AI를 도입하세요. 대면 1:1·그룹 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
-  keywords: ["AI PT", "AI 트레이닝", "업무 자동화", "AX 특강", "포커스 스페이스", "AI Transformation"],
+  title: "DayFocusLab | 기업의 AI Transformation을 설계합니다",
+  description: "업무 프로세스 진단부터 AI 자동화 구축, 사내 교육까지. 기업 맞춤 AX 솔루션과 AI PT로 실질적인 업무 혁신을 실현합니다.",
+  keywords: ["AI Transformation", "기업 AI 도입", "AX 솔루션", "AI PT", "업무 자동화", "AI 컨설팅", "사내 AI 교육"],
   openGraph: {
-    title: "Day Focus Lab | 당신의 하루에 집중하다",
-    description: "AI PT로 업무를 혁신하세요. 대면 1:1·그룹 AI 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
+    title: "DayFocusLab | 기업의 AI Transformation을 설계합니다",
+    description: "업무 프로세스 진단부터 AI 자동화 구축, 사내 교육까지. 기업 맞춤 AX 솔루션으로 실질적인 업무 혁신을 실현합니다.",
     type: "website",
     locale: "ko_KR",
+    siteName: "DayFocusLab",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Day Focus Lab | 당신의 하루에 집중하다",
-    description: "AI PT로 업무를 혁신하세요. 대면 1:1·그룹 AI 트레이닝, AX 특강, 포커스 스페이스를 제공합니다.",
+    title: "DayFocusLab | 기업의 AI Transformation을 설계합니다",
+    description: "업무 프로세스 진단부터 AI 자동화 구축, 사내 교육까지. 기업 맞춤 AX 솔루션으로 실질적인 업무 혁신을 실현합니다.",
   },
 };
 

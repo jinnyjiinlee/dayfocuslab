@@ -13,7 +13,7 @@ export default function Contact() {
       <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <DFLSymbol size={24} color="#050A34" secondaryColor="#085CF0" className="mb-6" />
+            <DFLSymbol size={28} variant="blue" className="mb-6" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#050A34] mb-6">
               {t.contact.title}
             </h1>
