@@ -75,8 +75,8 @@ export default function Privacy() {
             <section>
               <h2 className="text-lg font-bold text-[#050A34] mb-3">제5조 (개인정보 처리의 위탁)</h2>
               <p className="mb-3">회사는 서비스 제공을 위해 다음과 같이 개인정보 처리를 위탁하고 있습니다.</p>
-              <div className="bg-[#F7F9FC] p-5 rounded-xl">
-                <table className="w-full text-sm">
+              <div className="bg-[#F7F9FC] p-5 rounded-xl overflow-x-auto">
+                <table className="w-full text-sm min-w-[480px]">
                   <thead>
                     <tr className="border-b border-blue-200">
                       <th className="text-left py-2 font-semibold text-[#050A34] bg-blue-50 px-2 rounded-l">수탁업체</th>

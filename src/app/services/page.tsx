@@ -12,7 +12,7 @@ export default function Services() {
       <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div className="w-16 h-1 bg-[#050A34] rounded-full mb-8" />
+            <div className="w-12 h-1 bg-[#050A34] rounded-full mb-8" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-[#050A34]">
               {t.services.title}
             </h1>
@@ -37,7 +37,7 @@ export default function Services() {
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#050A34]">
                 {t.services.ax.title}
               </h2>
-              <p className="text-lg text-gray-400 mb-6">{t.services.ax.subtitle}</p>
+              <p className="text-lg text-gray-500 mb-6">{t.services.ax.subtitle}</p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 {t.services.ax.description}
               </p>
@@ -46,16 +46,16 @@ export default function Services() {
               <div className="mb-8 bg-blue-50 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Price</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Price</p>
                     <p className="font-bold text-lg text-[#050A34]">{t.services.ax.price}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Location</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Location</p>
                     <p className="font-bold text-lg text-[#050A34]">{t.services.ax.location}</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Service Duration</p>
+                  <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Service Duration</p>
                   <p className="font-bold text-[#050A34]">{t.services.ax.serviceDuration}</p>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function Services() {
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#050A34]">
                 {t.services.workshop.title}
               </h2>
-              <p className="text-lg text-gray-400 mb-6">{t.services.workshop.subtitle}</p>
+              <p className="text-lg text-gray-500 mb-6">{t.services.workshop.subtitle}</p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 {t.services.workshop.description}
               </p>
@@ -188,21 +188,21 @@ export default function Services() {
               <div className="mb-8 bg-blue-50 p-6 rounded-xl">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Price</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Price</p>
                     <p className="font-bold text-lg text-[#050A34]">{t.services.workshop.price}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Location</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Location</p>
                     <p className="font-bold text-lg text-[#050A34]">{t.services.workshop.location}</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Date</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Date</p>
                     <p className="font-bold text-[#050A34]">{t.services.workshop.date}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-[#085CF0]/60 uppercase tracking-wider font-medium mb-1">Capacity</p>
+                    <p className="text-xs text-[#085CF0] uppercase tracking-wider font-medium mb-1">Capacity</p>
                     <p className="font-bold text-[#050A34]">{t.services.workshop.capacity}</p>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ export default function Services() {
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#050A34]">
                 {t.services.studycafe.title}
               </h2>
-              <p className="text-lg text-gray-400 mb-6">{t.services.studycafe.subtitle}</p>
+              <p className="text-lg text-gray-500 mb-6">{t.services.studycafe.subtitle}</p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 {t.services.studycafe.description}
               </p>

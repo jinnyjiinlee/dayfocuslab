@@ -119,7 +119,7 @@ function CheckoutContent() {
           className={`w-full py-4 rounded-xl font-bold text-lg transition-colors ${
             agreed && !loading
               ? 'bg-[#050A34] text-white hover:bg-[#020151]'
-              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              : 'bg-gray-200 text-gray-400 border border-gray-300 cursor-not-allowed'
           }`}
         >
           {loading ? '처리 중...' : `${t.payment.checkout.pay} (${amount.toLocaleString()}원)`}

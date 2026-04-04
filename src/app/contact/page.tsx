@@ -44,7 +44,7 @@ export default function Contact() {
                   <p className="font-bold text-[#3C1E1E] text-lg mb-1">
                     {isKo ? '카카오톡 상담' : 'KakaoTalk'}
                   </p>
-                  <p className="text-[#3C1E1E]/60 text-sm">
+                  <p className="text-[#3C1E1E] text-sm">
                     {isKo ? '가장 빠르게 상담받으실 수 있습니다' : 'Fastest way to reach us'}
                   </p>
                 </div>

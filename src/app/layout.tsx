@@ -80,8 +80,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageProvider>
+          <a href="#main-content" className="skip-to-content">Skip to content</a>
           <Header />
-          <main className="min-h-screen">
+          <main id="main-content" className="min-h-screen">
             {children}
           </main>
           <Footer />

@@ -20,7 +20,7 @@ function FailContent() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </div>
-        <h1 className="text-3xl font-bold text-[#050A34] mb-8">{t.payment.fail.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-8">{t.payment.fail.title}</h1>
 
         <div className="bg-white rounded-2xl p-8 shadow-sm mb-8 text-left">
           <div className="space-y-4">

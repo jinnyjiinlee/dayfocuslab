@@ -5,31 +5,33 @@ import Link from 'next/link';
 import { useLanguage } from './LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+  const ko = locale === 'ko';
 
   return (
-    <footer className="relative bg-[#050A34] text-white">
+    <footer className="relative bg-[#050A34] text-white" role="contentinfo">
       {/* Subtle top gradient border */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" aria-hidden="true" />
 
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & Tagline */}
-          <div className="space-y-4">
+          <div className="col-span-2 md:col-span-1 space-y-4">
             <Image
               src="/images/logo/logo-white.png"
-              alt="Day Focus Lab"
+              alt="DayFocusLab"
               width={160}
               height={32}
-              className="h-8 w-auto"
+              className="h-7 w-auto"
             />
             <p className="text-gray-400 text-sm">{t.footer.tagline}</p>
+            {/* #26 - Social icons with focus states */}
             <div className="flex items-center gap-3 pt-2">
               <a
                 href="https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 hover:bg-[#085CF0] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-gray-800 hover:bg-[#085CF0] focus-visible:bg-[#085CF0] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +42,7 @@ export default function Footer() {
                 href="https://open.kakao.com/o/sSp6Rcli"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 hover:bg-[#FEE500] hover:text-[#3C1E1E] rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-gray-800 hover:bg-[#FEE500] hover:text-[#3C1E1E] focus-visible:bg-[#FEE500] focus-visible:text-[#3C1E1E] rounded-lg flex items-center justify-center transition-colors"
                 aria-label="KakaoTalk"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -50,24 +52,22 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* #27 - Navigation with aria-label and underline hover */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
               Navigation
             </h4>
-            <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                {t.nav.home}
-              </Link>
-              <Link href="/services" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                {t.nav.services}
-              </Link>
-              <Link href="/about" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                {t.nav.about}
-              </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                {t.nav.contact}
-              </Link>
+            <nav className="flex flex-col space-y-2.5" aria-label={ko ? '페이지 내비게이션' : 'Page navigation'}>
+              {[
+                { href: '/', label: t.nav.home },
+                { href: '/services', label: t.nav.services },
+                { href: '/about', label: t.nav.about },
+                { href: '/contact', label: t.nav.contact },
+              ].map((link) => (
+                <Link key={link.href} href={link.href} className="text-gray-300 hover:text-white transition-colors text-sm w-fit hover:underline underline-offset-4">
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -76,12 +76,12 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
               Legal
             </h4>
-            <nav className="flex flex-col space-y-2">
-              <Link href="/terms" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                이용약관
+            <nav className="flex flex-col space-y-2.5" aria-label={ko ? '법적 정보' : 'Legal information'}>
+              <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm w-fit hover:underline underline-offset-4">
+                {ko ? '이용약관' : 'Terms of Service'}
               </Link>
-              <Link href="/privacy" className="text-gray-300 hover:text-[#085CF0] transition-colors text-sm">
-                개인정보처리방침
+              <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm w-fit hover:underline underline-offset-4">
+                {ko ? '개인정보처리방침' : 'Privacy Policy'}
               </Link>
             </nav>
           </div>
@@ -91,21 +91,21 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
               Business
             </h4>
-            <div className="text-gray-400 text-xs space-y-1 leading-relaxed">
-              <p>상호: 데이포커스랩</p>
-              <p>대표: 이지인</p>
-              <p>사업자등록번호: 546-10-03346</p>
-              <p>주소: 서울특별시 광진구 능동로 330, 5층</p>
-              <p>이메일: dayfocuslab@gmail.com</p>
-              <p>전화: 010-4067-5392</p>
-            </div>
+            <address className="text-gray-400 text-xs space-y-1.5 leading-relaxed not-italic">
+              <p>{ko ? '상호' : 'Company'}: {ko ? '데이포커스랩' : 'DayFocusLab'}</p>
+              <p>{ko ? '대표' : 'CEO'}: {ko ? '이지인' : 'Jiin Lee'}</p>
+              <p>{ko ? '사업자등록번호' : 'Business No.'}: 546-10-03346</p>
+              <p>{ko ? '주소' : 'Address'}: {ko ? '서울특별시 광진구 능동로 330, 5층' : 'Neungdong-ro 330, 5F, Gwangjin-gu, Seoul'}</p>
+              <p>{ko ? '이메일' : 'Email'}: dayfocuslab@gmail.com</p>
+              <p>{ko ? '전화' : 'Phone'}: 010-4067-5392</p>
+            </address>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-gray-800/50">
+        <div className="mt-12 md:mt-16 pt-8 border-t border-gray-800/50">
           <p className="text-gray-500 text-sm text-center">
-            &copy; 2025-{new Date().getFullYear()} Day Focus Lab. All rights reserved.
+            &copy; 2025-{new Date().getFullYear()} DayFocusLab. All rights reserved.
           </p>
         </div>
       </div>
