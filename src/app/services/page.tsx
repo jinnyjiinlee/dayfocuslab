@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/components/LanguageContext';
 import Link from 'next/link';
+import DFLSymbol from '@/components/DFLSymbol';
 
 export default function Services() {
   const { t } = useLanguage();
@@ -12,7 +13,7 @@ export default function Services() {
       <section className="pt-[96px] pb-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
-            <div className="w-12 h-1 bg-[#050A34] rounded-full mb-8" />
+            <DFLSymbol size={24} color="#050A34" secondaryColor="#085CF0" className="mb-8" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-[#050A34]">
               {t.services.title}
             </h1>
@@ -103,9 +104,7 @@ export default function Services() {
               <ul className="space-y-3 mb-8">
                 {t.services.ax.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-[#085CF0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -212,9 +211,7 @@ export default function Services() {
               <ul className="space-y-3 mb-8">
                 {t.services.workshop.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-[#085CF0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -256,9 +253,7 @@ export default function Services() {
               <ul className="space-y-3">
                 {t.services.studycafe.features.map((feature: string, i: number) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 mr-3 text-[#085CF0] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <DFLSymbol size={16} color="#085CF0" secondaryColor="#713FFF" className="mr-3 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}

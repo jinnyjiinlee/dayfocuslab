@@ -57,12 +57,12 @@ export default async function Image() {
               marginBottom: 24,
             }}
           >
-            <svg width="64" height="64" viewBox="0 0 100 100">
-              <polygon points="0,25 50,0 50,50 0,75" fill="#050A34" />
-              <polygon points="50,0 100,25 100,75 50,50" fill="#050A34" />
-              <polygon points="0,25 50,50 50,100 0,75" fill="#050A34" opacity="0.7" />
-              <polygon points="50,50 100,75 100,100 50,100" fill="#050A34" opacity="0.7" />
-              <rect x="38" y="25" width="24" height="50" fill="white" />
+            <svg width="64" height="64" viewBox="0 0 100 120">
+              <polygon points="0,30 50,0 50,60 0,90" fill="#085CF0" />
+              <polygon points="50,0 100,30 100,90 50,60" fill="#713FFF" />
+              <polygon points="0,30 50,60 50,120 0,90" fill="#085CF0" opacity="0.6" />
+              <polygon points="50,60 100,90 100,120 50,120" fill="#713FFF" opacity="0.6" />
+              <rect x="38" y="30" width="24" height="60" fill="white" />
             </svg>
           </div>
 

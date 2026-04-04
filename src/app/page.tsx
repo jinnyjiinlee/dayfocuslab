@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/components/LanguageContext';
 import { useInView } from '@/components/useInView';
 import AnimatedCounter from '@/components/AnimatedCounter';
+import DFLSymbol from '@/components/DFLSymbol';
 
 function FadeIn({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isInView } = useInView(0.1);
@@ -48,18 +49,16 @@ export default function Home() {
           }}
         />
 
-        <div className="absolute right-[-5%] top-[50%] -translate-y-1/2 opacity-[0.03] hidden lg:block" aria-hidden="true">
-          <Image src="/images/logo/symbol-blue.png" alt="" width={600} height={600} className="w-[500px] h-auto" />
+        {/* Symbol watermark */}
+        <div className="absolute right-[-5%] top-[50%] -translate-y-1/2 opacity-[0.04] hidden lg:block" aria-hidden="true">
+          <DFLSymbol size={500} color="#085CF0" secondaryColor="#713FFF" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-32">
           <div className="max-w-3xl">
             <div className="opacity-0 animate-fade-in">
               <span className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-sm text-[#AFE9FD] font-semibold mb-10">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#085CF0] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#AFE9FD]" />
-                </span>
+                <DFLSymbol size={14} color="#AFE9FD" secondaryColor="#085CF0" />
                 AI Transformation Partner
               </span>
             </div>
@@ -121,8 +120,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="flex justify-center py-6 bg-white" aria-hidden="true">
+        <DFLSymbol size={20} color="#E5E8EB" />
+      </div>
+
       {/* ===== SERVICES - B2B First, then B2C ===== */}
-      <section className="py-20 md:py-28 bg-white relative">
+      <section className="py-16 md:py-28 bg-white relative">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn className="mb-12 md:mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#050A34] rounded-full text-xs font-bold text-white uppercase tracking-wider mb-5">
@@ -164,8 +168,8 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {t.services.enterprise.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white/[0.05] rounded-2xl p-4">
-                      <div className="w-8 h-8 rounded-lg bg-[#085CF0]/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-xs font-bold text-[#AFE9FD]">{String(i + 1).padStart(2, '0')}</span>
+                      <div className="shrink-0 mt-0.5">
+                        <DFLSymbol size={18} color="#AFE9FD" secondaryColor="#085CF0" />
                       </div>
                       <p className="text-white/80 text-sm font-medium leading-snug">{feature}</p>
                     </div>
@@ -271,8 +275,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="flex justify-center py-6 bg-white" aria-hidden="true">
+        <DFLSymbol size={20} color="#E5E8EB" />
+      </div>
+
       {/* ===== PROCESS - 4 Steps ===== */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn className="text-center mb-16 md:mb-20">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#050A34] rounded-full text-xs font-bold text-white uppercase tracking-wider mb-5">
@@ -346,8 +355,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#050A34]" />
         <div className="absolute inset-0" aria-hidden="true"
           style={{ background: 'radial-gradient(ellipse at 20% 50%, rgba(8,92,240,0.2) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(113,63,255,0.15) 0%, transparent 50%)' }} />
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03]" aria-hidden="true">
-          <Image src="/images/logo/symbol-blue.png" alt="" width={500} height={500} className="w-[400px] h-auto" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04]" aria-hidden="true">
+          <DFLSymbol size={400} color="#085CF0" secondaryColor="#713FFF" />
         </div>
 
         <FadeIn className="relative z-10 max-w-4xl mx-auto px-6 text-center">
