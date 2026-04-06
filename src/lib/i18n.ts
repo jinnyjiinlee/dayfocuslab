@@ -130,7 +130,6 @@ export const translations = {
             highlights: [
               '직장인·자영업자 대상 AX(AI Transformation) 컨설팅 — 업무 효율 극대화',
               '포커스 스페이스 1호점(서울점)·2호점(경기점) 직접 운영 — 몰입 환경 제공',
-              '클로드코드로 매장 운영 업무 90% 자동화 달성',
             ],
           },
           {
@@ -485,7 +484,6 @@ export const translations = {
             highlights: [
               'AX (AI Transformation) consulting for professionals and small business owners — maximizing efficiency',
               'Operating Focus Space #1 (Seoul) and #2 (Gyeonggi) hands-on — providing environments for deep focus',
-              '90% operations automation via Claude Code',
             ],
           },
           {
