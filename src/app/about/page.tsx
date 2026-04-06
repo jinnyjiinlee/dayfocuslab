@@ -34,14 +34,70 @@ export default function About() {
                   <span key={i} className="px-4 py-2 bg-[#050A34] text-white text-sm rounded-2xl">{skill}</span>
                 ))}
               </div>
-              <ul className="space-y-2">
-                {t.about.founder.experience.map((exp: string, i: number) => (
-                  <li key={i} className="text-gray-600 flex items-start">
-                    <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-[#050A34] rounded-full flex-shrink-0" />
-                    {exp}
-                  </li>
-                ))}
-              </ul>
+
+              {/* Career timeline */}
+              <div className="space-y-4 pt-2">
+                <h4 className="text-xs font-semibold text-[#085CF0] uppercase tracking-wider">{t.about.founder.careerLabel}</h4>
+                <ol className="space-y-5 border-l-2 border-gray-100 pl-5">
+                  {t.about.founder.career.map((item: { role: string; company: string; period: string; highlights: string[] }, i: number) => (
+                    <li key={i} className="relative">
+                      <span className="absolute -left-[27px] top-1.5 w-3 h-3 bg-[#085CF0] rounded-full border-2 border-white" />
+                      <div className="flex flex-wrap items-baseline gap-x-2">
+                        <span className="font-semibold text-[#050A34]">{item.role}</span>
+                        <span className="text-gray-500 text-sm">· {item.company}</span>
+                      </div>
+                      <p className="text-xs text-gray-400 mb-2">{item.period}</p>
+                      <ul className="space-y-1">
+                        {item.highlights.map((h: string, j: number) => (
+                          <li key={j} className="text-sm text-gray-600 flex items-start">
+                            <span className="mr-2 mt-1.5 w-1 h-1 bg-gray-400 rounded-full flex-shrink-0" />
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Credentials */}
+              <div className="pt-2">
+                <h4 className="text-xs font-semibold text-[#085CF0] uppercase tracking-wider mb-3">{t.about.founder.credentialsLabel}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {t.about.founder.credentials.map((c: string, i: number) => (
+                    <span key={i} className="px-3 py-1.5 bg-[#F7F9FC] text-[#050A34] text-sm rounded-lg border border-gray-200">{c}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Projects */}
+              <div className="pt-2">
+                <h4 className="text-xs font-semibold text-[#085CF0] uppercase tracking-wider mb-3">{t.about.founder.projectsLabel}</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {t.about.founder.projects.map((p: { name: string; tagline: string; description: string; stack: string[]; url: string }, i: number) => {
+                    const hasUrl = Boolean(p.url);
+                    return (
+                      <a
+                        key={i}
+                        href={hasUrl ? p.url : undefined}
+                        target={hasUrl ? '_blank' : undefined}
+                        rel={hasUrl ? 'noopener noreferrer' : undefined}
+                        className={`block p-4 rounded-xl border border-gray-200 bg-white ${hasUrl ? 'hover:border-[#085CF0] hover:shadow-sm transition' : 'opacity-90 cursor-default'}`}
+                      >
+                        <div className="font-semibold text-[#050A34]">{p.name}</div>
+                        <div className="text-xs text-[#085CF0] mb-2">{p.tagline}</div>
+                        <p className="text-sm text-gray-600 leading-relaxed mb-3">{p.description}</p>
+                        <div className="flex flex-wrap gap-1">
+                          {p.stack.map((s: string, j: number) => (
+                            <span key={j} className="px-2 py-0.5 bg-[#F7F9FC] text-gray-500 text-xs rounded">{s}</span>
+                          ))}
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+
               <a href={t.about.founder.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#085CF0] text-white rounded-2xl hover:bg-[#0950D0] transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn

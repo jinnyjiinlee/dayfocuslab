@@ -116,15 +116,101 @@ export const translations = {
         title: '대표 소개',
         name: '이지인 (Jinny)',
         role: 'DAYFOCUS LAB 대표',
-        bio: 'AI 기술과 시스템 설계를 결합해 업무 자동화를 실현하는 AX(AI Transformation) 전문가입니다. 코르카에서 AX 엔지니어로 근무하며 AI 도입 프로젝트를 수행했고, 코드잇에서는 운영 기획·자동화·개발을 담당했습니다. 현재 스터디카페 2개 지점을 직접 운영하며 클로드코드를 활용해 매장 운영 업무 90% 자동화를 달성했습니다.',
-        expertise: ['AI Transformation', '업무 자동화', '클로드코드', '공간 운영'],
+        bio: '사람들이 본질에 몰입할 수 있도록 돕는 일을 합니다. AI로 반복업무를 자동화하고, 물리적 포커스 스페이스를 운영하며, 디지털·오프라인 양면에서 몰입 환경을 설계합니다. 코드잇·코르카를 거쳐 DAYFOCUS LAB을 창업했고, 직접 빌드한 서비스로 취준생·개인사업자·학습자의 일상 속 마찰을 덜어내고 있습니다.',
+        expertise: ['AI Transformation', '업무 자동화', '클로드코드', 'Focus Space 운영', '몰입 설계'],
         linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
-        experience: [
-          '전) 코르카 AX(AI Transformation) 엔지니어',
-          '전) 코드잇 LX Planning Manager (운영 기획·자동화·개발)',
-          '2026 Cursor 해커톤 참여',
-          '스터디카페 2개 지점 직접 운영 중',
-          '클로드코드로 매장 운영 업무 90% 자동화 달성',
+        careerLabel: 'Career',
+        credentialsLabel: 'Credentials',
+        projectsLabel: 'Projects',
+        career: [
+          {
+            role: '대표 / Founder',
+            company: 'DAYFOCUS LAB',
+            period: '2025.12 – 현재',
+            highlights: [
+              '직장인·자영업자의 몰입을 돕는 AX(AI Transformation) 컨설팅',
+              '포커스 스페이스 1호점(서울점)·2호점(경기점) 직접 운영 중',
+              '클로드코드로 매장 운영 업무 90% 자동화 — 운영자가 본질에 집중하도록',
+            ],
+          },
+          {
+            role: 'AX Engineer',
+            company: '코르카 (Korca)',
+            period: '2025.10 – 2025.12',
+            highlights: [
+              '기업 AI 도입 프로젝트 수행 — 반복업무를 덜어내 사람이 본질에 집중하도록',
+            ],
+          },
+          {
+            role: 'Software Developer · 1인 개발자',
+            company: '자영업 / Independent',
+            period: '2024.12 – 2025.9',
+            highlights: [
+              '실사용자 기반 웹 서비스 기획·개발 (PotentialBot, Taxfree, LMS 외주 등)',
+              '기획→디자인→개발→운영 E2E, Next.js · TypeScript · Supabase 스택',
+              'LMS 외주: 제출률 20→60%, 로딩 5s→1s(-80%), 수강생 100명+ 사용',
+            ],
+          },
+          {
+            role: 'PM · IDP 프로젝트 멘토',
+            company: '얼라이브커뮤니티 · 미래내일일경험',
+            period: '2025.4 – 2025.7',
+            highlights: [
+              '한솔제지 IDP(Individual Development Plan) 멘토 PM',
+              'McKinsey 7단계 문제해결 프레임워크 기반 8주 멘토링 설계·운영',
+              '직장인이 스스로 실무 문제를 정의·해결하며 성장에 몰입하도록 코칭',
+            ],
+          },
+          {
+            role: 'LX Planning Manager · Community Manager',
+            company: '코드잇 (Codeit)',
+            period: '2023.11 – 2024.10',
+            highlights: [
+              '운영 효율화 및 데이터 기반 의사결정 체계 구축',
+              'Google Apps Script로 피어리뷰·메일 발송 자동화 → 작업 시간 90% 단축',
+              '멘토링 일지 자동화 83%↓, 부트캠프 관리 시트 자동화 80%↓ — 수강생 경험 향상',
+            ],
+          },
+          {
+            role: 'Education Planning Manager',
+            company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
+            period: '2021.2 – 2023.7',
+            highlights: [
+              '대학생 500명+ 1:1 멘토링 및 리더십 강의 30회+ 진행',
+              '잠비아 지부 업무 지원, 한국 대표 통역·소통 및 회원 유치 전략 기획',
+              '신규 고객 유입 80% 달성 · 누적 후원금 1억원 달성',
+            ],
+          },
+        ],
+        credentials: [
+          'Birkman Certified Professional (버크만 심리검사 공식 자격)',
+          '2026 Cursor Hackathon Participant',
+        ],
+        projects: [
+          {
+            name: 'PotentialBot',
+            tagline: '취준생·직장인을 위한 데일리 응원 메시지 구독 서비스',
+            description:
+              '매일 아침 8시, 유형별 맞춤 응원 메시지를 자동 발송해 하루의 멘탈을 정돈하도록 돕는 서비스. 일상 속 작은 마찰을 덜어내 본업에 몰입할 수 있게 만드는 것이 목표. SNS 마케팅 2주 만에 60명 사용자 확보, PageSpeed 74→98, LCP 9s→2s로 성능 최적화.',
+            stack: ['Next.js', 'Supabase', 'TypeScript'],
+            url: 'https://potential-bot.netlify.app/',
+          },
+          {
+            name: 'Taxfree (텍스프리)',
+            tagline: '개인사업자 전용 무료 세무 진단 + AI 상담',
+            description:
+              '세금 스트레스에서 벗어나 본업에 몰입할 수 있도록, 7개 질문으로 2분 만에 세무 상태를 진단하고 24시간 AI 상담을 제공. 2026 Cursor Hackathon 프로젝트.',
+            stack: ['Next.js', 'AI Chat', 'TypeScript'],
+            url: 'https://tax-free.vercel.app/',
+          },
+          {
+            name: '말씀새록',
+            tagline: 'Daily Scripture Curation · 오늘의 말씀 랜덤 큐레이션',
+            description:
+              '사용자가 매일 짧은 말씀 한 구절을 랜덤으로 받아볼 수 있는 데일리 큐레이션 서비스. 하루를 시작할 때 마음을 정돈하고 자기 성찰의 리듬을 만들 수 있도록 설계.',
+            stack: ['Next.js', 'TypeScript'],
+            url: '',
+          },
         ],
       },
       focusSpace: {
@@ -384,16 +470,102 @@ export const translations = {
       founder: {
         title: 'Meet the Founder',
         name: 'Jiin Lee (Jinny)',
-        role: 'CEO',
-        bio: 'I am Jiin Lee, CEO of Day Focus Lab. I believe in the value of focus and growth, and am committed to creating an environment where people can maximize their potential. Through AI-powered business innovation and hands-on space management, I aim to build a growth ecosystem where theory and practice harmonize.',
-        expertise: ['AI Transformation', 'Business Consulting', 'Space Management'],
+        role: 'Founder, DAYFOCUS LAB',
+        bio: "I help people focus on what truly matters. Through AI-powered automation, physical focus spaces, and hands-on product building, I design environments — both digital and offline — where people can immerse themselves in meaningful work. Former LX Manager at Codeit and AX Engineer at Korca; founded DAYFOCUS LAB to unify everything I've learned about helping others stay in flow.",
+        expertise: ['AI Transformation', 'Business Automation', 'Claude Code', 'Focus Space Operations', 'Flow Design'],
         linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
-        experience: [
-          'Former AX Engineer at Korka',
-          'Former LX Planning Manager at Codeit',
+        careerLabel: 'Career',
+        credentialsLabel: 'Credentials',
+        projectsLabel: 'Projects',
+        career: [
+          {
+            role: 'Founder',
+            company: 'DAYFOCUS LAB',
+            period: 'Dec 2025 – Present',
+            highlights: [
+              'AX (AI Transformation) consulting for professionals and small business owners',
+              'Operating Focus Space #1 (Seoul) and #2 (Gyeonggi) hands-on',
+              '90% operations automation via Claude Code — so operators can focus on what matters',
+            ],
+          },
+          {
+            role: 'AX Engineer',
+            company: 'Korca',
+            period: 'Oct 2025 – Dec 2025',
+            highlights: [
+              'Led enterprise AI adoption projects — removing repetitive work so people can focus on the essential',
+            ],
+          },
+          {
+            role: 'Software Developer · Indie Builder',
+            company: 'Independent',
+            period: 'Dec 2024 – Sep 2025',
+            highlights: [
+              'Shipped real-user web products end-to-end (PotentialBot, Taxfree, LMS contract, etc.)',
+              'Planning → Design → Dev → Ops on Next.js · TypeScript · Supabase stack',
+              'LMS contract: submission rate 20→60%, load time 5s→1s (-80%), 100+ active learners',
+            ],
+          },
+          {
+            role: 'Project PM · IDP Mentor',
+            company: 'Alive Community · Mirae-Naeil Ilgyeongheom',
+            period: 'Apr 2025 – Jul 2025',
+            highlights: [
+              'PM for Hansol Paper IDP (Individual Development Plan) mentoring program',
+              'Designed & ran 8-week mentoring based on McKinsey 7-step problem-solving framework',
+              'Coached professionals to define & solve their own workplace problems — staying in growth flow',
+            ],
+          },
+          {
+            role: 'LX Planning Manager · Community Manager',
+            company: 'Codeit',
+            period: 'Nov 2023 – Oct 2024',
+            highlights: [
+              'Built data-driven operations and decision-making systems',
+              'Automated peer review & email workflows via Google Apps Script — 90% time reduction',
+              'Mentor log automation 83%↓, bootcamp tracking sheet 80%↓ — better learner experience',
+            ],
+          },
+          {
+            role: 'Education Planning Manager',
+            company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
+            period: 'Feb 2021 – Jul 2023',
+            highlights: [
+              '1:1 mentoring for 500+ university students, 30+ leadership lectures',
+              'Supported Zambia branch ops, served as interpreter/liaison for Korea delegation',
+              'Achieved 80% new member acquisition and 100M KRW cumulative fundraising',
+            ],
+          },
+        ],
+        credentials: [
+          'Birkman Certified Professional',
           '2026 Cursor Hackathon Participant',
-          'Operating 2 Study Cafe Locations',
-          '90% Operations Automation with Claude Code',
+        ],
+        projects: [
+          {
+            name: 'PotentialBot',
+            tagline: 'Daily encouragement messages for job seekers & professionals',
+            description:
+              "Sends personalized encouragement messages every morning at 8 AM, helping users start the day with a clear mind so they can focus on what matters. Acquired 60 users in 2 weeks via organic social marketing; optimized PageSpeed 74→98 and LCP 9s→2s.",
+            stack: ['Next.js', 'Supabase', 'TypeScript'],
+            url: 'https://potential-bot.netlify.app/',
+          },
+          {
+            name: 'Taxfree',
+            tagline: 'Free tax diagnosis & AI consultation for sole proprietors',
+            description:
+              'A 7-question, 2-minute tax health check plus 24/7 AI consultation — built so self-employed founders can stop worrying about taxes and focus on their core business. Built for the 2026 Cursor Hackathon.',
+            stack: ['Next.js', 'AI Chat', 'TypeScript'],
+            url: 'https://tax-free.vercel.app/',
+          },
+          {
+            name: 'Malsseum Saerok',
+            tagline: 'Daily Scripture Curation',
+            description:
+              'A simple daily curation service that delivers a random short scripture to users each day, designed to help them ground themselves and build a rhythm of reflection.',
+            stack: ['Next.js', 'TypeScript'],
+            url: '',
+          },
         ],
       },
       focusSpace: {
