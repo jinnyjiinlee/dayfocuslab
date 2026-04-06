@@ -63,13 +63,13 @@ export default function Services() {
           <FeatureList features={t.services.ax.features} className="mb-8" />
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/checkout" className="px-8 py-4 bg-[#050A34] text-white font-medium rounded-xl hover:bg-[#020151] transition-colors text-center">결제하기</Link>
-            <Link href="/contact" className="px-8 py-4 bg-white border border-[#050A34] text-[#050A34] font-medium rounded-xl hover:bg-gray-50 transition-colors text-center">무료 상담 신청</Link>
+            <Link href="/contact" className="px-8 py-4 bg-[#050A34] text-white font-medium rounded-xl hover:bg-[#020151] transition-colors text-center">무료 상담 신청</Link>
+            <Link href="/checkout" className="px-8 py-4 bg-white border border-[#050A34] text-[#050A34] font-medium rounded-xl hover:bg-gray-50 transition-colors text-center">바로 결제하기</Link>
           </div>
         </div>
         <div>
           <div className="aspect-[4/3] bg-[#F7F9FC] rounded-3xl overflow-hidden shadow-lg">
-            <img src="/images/ai-pt-group.png" alt="AI PT 트레이닝 현장" className="w-full h-full object-cover" />
+            <img src="/images/ai-pt-group.png" alt="DAYFOCUS LAB AI PT 그룹 트레이닝 현장 — 참여자들이 노트북으로 AI 자동화 실습을 진행하는 모습" className="w-full h-full object-cover" />
           </div>
         </div>
       </ServiceSection>
@@ -131,7 +131,7 @@ function ServiceVisual({ title, features, icon }: { title: string; features: str
         <h3 className="text-xl font-bold text-[#050A34] mb-3">{title}</h3>
         <div className="flex flex-wrap gap-2 justify-center">
           {features.map((f: string, i: number) => (
-            <span key={i} className="px-3 py-1.5 bg-[#050A34]/8 text-[#085CF0] text-xs font-medium rounded-full">{f}</span>
+            <span key={i} className="px-3 py-1.5 bg-[#050A34]/12 text-[#050A34] text-xs font-semibold rounded-full">{f}</span>
           ))}
         </div>
       </div>

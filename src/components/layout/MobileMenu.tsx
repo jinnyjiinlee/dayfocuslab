@@ -17,12 +17,13 @@ export default function MobileMenu({ isOpen, links, ctaLabel, onClose }: {
         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
     >
-      <nav className="flex flex-col items-center justify-center h-full gap-2">
+      <nav className="flex flex-col items-center justify-center h-full gap-2" aria-hidden={!isOpen}>
         {links.map((link, i) => (
           <Link
             key={link.href}
             href={link.href}
             onClick={onClose}
+            tabIndex={isOpen ? 0 : -1}
             className="text-3xl font-black text-[#050A34] hover:text-[#085CF0] transition-all duration-300 py-3"
             style={{
               opacity: isOpen ? 1 : 0,
@@ -36,6 +37,7 @@ export default function MobileMenu({ isOpen, links, ctaLabel, onClose }: {
         <Link
           href="/contact"
           onClick={onClose}
+          tabIndex={isOpen ? 0 : -1}
           className="mt-8 inline-flex items-center gap-2 px-8 py-3.5 bg-[#050A34] text-white font-bold rounded-2xl hover:bg-[#020151] transition-colors"
           style={{
             opacity: isOpen ? 1 : 0,

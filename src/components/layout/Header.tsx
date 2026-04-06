@@ -85,7 +85,8 @@ export default function Header() {
           <div className="flex items-center gap-3 relative z-50">
             <button
               onClick={() => setLocale(locale === 'ko' ? 'en' : 'ko')}
-              className={`text-xs font-bold px-3 py-1.5 border rounded-full uppercase tracking-wider transition-all duration-200 ${isDark ? 'border-white/20 text-white/60 hover:border-white/40 hover:text-white' : 'border-gray-200 text-gray-500 hover:border-[#050A34] hover:bg-[#050A34] hover:text-white'}`}
+              aria-label={locale === 'ko' ? 'Switch to English' : '한국어로 전환'}
+              className={`text-xs font-bold px-3.5 py-2 border rounded-full uppercase tracking-wider transition-all duration-200 ${isDark ? 'border-white/40 text-white hover:border-white hover:bg-white/10' : 'border-gray-300 text-gray-700 hover:border-[#050A34] hover:bg-[#050A34] hover:text-white'}`}
             >
               {locale === 'ko' ? 'EN' : 'KO'}
             </button>

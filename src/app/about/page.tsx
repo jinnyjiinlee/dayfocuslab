@@ -20,7 +20,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-1 w-full max-w-[280px] sm:max-w-xs mx-auto lg:max-w-none lg:mx-0">
               <div className="aspect-[3/4] bg-[#F7F9FC] rounded-2xl overflow-hidden border border-gray-100">
-                <img src="/images/founder.png" alt={t.about.founder.name} className="w-full h-full object-cover" />
+                <img src="/images/founder.png" alt={`${t.about.founder.name} — ${t.about.founder.role}`} className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:col-span-2 space-y-6">

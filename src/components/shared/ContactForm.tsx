@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
 import { useEmailValidation, EmailState } from './useEmailValidation';
 
@@ -19,6 +19,15 @@ export default function ContactForm() {
   const [message, setMessage] = useState('');
   const [agreed, setAgreed] = useState(false);
   const emailField = useEmailValidation();
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to success message and focus for accessibility when status changes
+  useEffect(() => {
+    if (status === 'success' && successRef.current) {
+      successRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      successRef.current.focus();
+    }
+  }, [status]);
 
   const f = t.contact.form;
 
@@ -67,7 +76,13 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 text-center">
+      <div
+        ref={successRef}
+        role="status"
+        aria-live="polite"
+        tabIndex={-1}
+        className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 text-center outline-none scroll-mt-24"
+      >
         <div className="w-16 h-16 mx-auto mb-6 bg-green-50 rounded-full flex items-center justify-center">
           <svg className="w-9 h-9 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -115,7 +130,12 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      <form
+        onSubmit={handleSubmit}
+        className={`space-y-5 ${status === 'sending' ? 'opacity-70 pointer-events-none' : ''}`}
+        aria-busy={status === 'sending'}
+        noValidate
+      >
         {/* Honeypot field for spam bots (hidden) */}
         <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
