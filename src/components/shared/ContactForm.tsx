@@ -2,6 +2,7 @@
 
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
+import { useEmailValidation, EmailState } from './useEmailValidation';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meepvkog';
 const MAX_MESSAGE_LENGTH = 2000;
@@ -17,6 +18,7 @@ export default function ContactForm() {
   const [inquiryType, setInquiryType] = useState<InquiryType>('');
   const [message, setMessage] = useState('');
   const [agreed, setAgreed] = useState(false);
+  const emailField = useEmailValidation();
 
   const f = t.contact.form;
 
@@ -25,11 +27,14 @@ export default function ContactForm() {
     setInquiryType('');
     setMessage('');
     setAgreed(false);
+    emailField.reset();
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!agreed) return;
+    // Block submit if email is in an error state
+    if (emailField.state === 'korean' || emailField.state === 'invalid') return;
 
     setStatus('sending');
     const form = e.currentTarget;
@@ -51,6 +56,7 @@ export default function ContactForm() {
         setInquiryType('');
         setMessage('');
         setAgreed(false);
+        emailField.reset();
       } else {
         setStatus('error');
       }
@@ -86,8 +92,12 @@ export default function ContactForm() {
   const messagePlaceholder = inquiryType
     ? f.messagePlaceholders[inquiryType]
     : f.messagePlaceholders.other;
+  const subjectPlaceholder = inquiryType
+    ? f.subjectPlaceholders[inquiryType]
+    : f.subjectPlaceholders.other;
 
-  const isSubmitDisabled = status === 'sending' || !agreed;
+  const emailHasError = emailField.state === 'korean' || emailField.state === 'invalid';
+  const isSubmitDisabled = status === 'sending' || !agreed || emailHasError;
 
   return (
     <div className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100">
@@ -130,24 +140,22 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FieldLabel htmlFor="name" label={f.name} required requiredLabel={f.required}>
-            <input type="text" id="name" name="name" required autoComplete="name" className={inputClass} />
+            <input type="text" id="name" name="name" required autoComplete="name" placeholder={f.namePlaceholder} className={`${inputClass} placeholder:text-gray-300`} />
           </FieldLabel>
-          <FieldLabel htmlFor="email" label={f.email} required requiredLabel={f.required}>
-            <input type="email" id="email" name="email" required autoComplete="email" inputMode="email" className={inputClass} />
-          </FieldLabel>
+          <EmailField field={emailField} labels={f} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <FieldLabel htmlFor="company" label={f.company} optional optionalLabel={f.optional}>
-            <input type="text" id="company" name="company" autoComplete="organization" className={inputClass} />
+            <input type="text" id="company" name="company" autoComplete="organization" placeholder={f.companyPlaceholder} className={`${inputClass} placeholder:text-gray-300`} />
           </FieldLabel>
           <FieldLabel htmlFor="position" label={f.position} optional optionalLabel={f.optional}>
-            <input type="text" id="position" name="position" autoComplete="organization-title" className={inputClass} />
+            <input type="text" id="position" name="position" autoComplete="organization-title" placeholder={f.positionPlaceholder} className={`${inputClass} placeholder:text-gray-300`} />
           </FieldLabel>
         </div>
 
         <FieldLabel htmlFor="subject" label={f.subject} required requiredLabel={f.required}>
-          <input type="text" id="subject" name="subject" required className={inputClass} />
+          <input type="text" id="subject" name="subject" required placeholder={subjectPlaceholder} className={`${inputClass} placeholder:text-gray-300`} />
         </FieldLabel>
 
         <FieldLabel
@@ -233,6 +241,93 @@ export default function ContactForm() {
 
 const inputClass =
   'w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#050A34] focus:ring-1 focus:ring-[#050A34] outline-none transition text-[#050A34]';
+
+type EmailFieldLabels = {
+  email: string;
+  required: string;
+  emailPlaceholder: string;
+  emailHint: string;
+  emailKoreanWarning: string;
+  emailInvalid: string;
+  emailValid: string;
+};
+
+function EmailField({
+  field,
+  labels,
+}: {
+  field: ReturnType<typeof useEmailValidation>;
+  labels: EmailFieldLabels;
+}) {
+  const { email, state, onChange, onBlur } = field;
+  const borderClass =
+    state === 'korean' || state === 'invalid'
+      ? 'border-red-400 focus:border-red-500 focus:ring-red-500'
+      : state === 'valid'
+        ? 'border-green-400 focus:border-green-500 focus:ring-green-500'
+        : 'border-gray-200 focus:border-[#050A34] focus:ring-[#050A34]';
+
+  return (
+    <FieldLabel htmlFor="email" label={labels.email} required requiredLabel={labels.required}>
+      <div className="relative">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autoComplete="email"
+          inputMode="email"
+          lang="en"
+          value={email}
+          onChange={onChange}
+          onBlur={onBlur}
+          placeholder={labels.emailPlaceholder}
+          className={`w-full px-4 py-3 pr-10 rounded-xl border focus:ring-1 outline-none transition text-[#050A34] placeholder:text-gray-300 ${borderClass}`}
+          aria-invalid={state === 'korean' || state === 'invalid'}
+          aria-describedby="email-feedback"
+        />
+        <EmailStateIcon state={state} />
+      </div>
+      <EmailFeedback state={state} labels={labels} />
+    </FieldLabel>
+  );
+}
+
+function EmailStateIcon({ state }: { state: EmailState }) {
+  if (state === 'valid') {
+    return (
+      <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+      </svg>
+    );
+  }
+  if (state === 'korean' || state === 'invalid') {
+    return (
+      <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+    );
+  }
+  return null;
+}
+
+function EmailFeedback({ state, labels }: { state: EmailState; labels: EmailFieldLabels }) {
+  if (state === 'korean') {
+    return (
+      <p id="email-feedback" className="mt-1.5 text-xs text-red-600 font-medium flex items-start gap-1.5">
+        <span className="mt-0.5">⌨️</span>
+        <span>{labels.emailKoreanWarning}</span>
+      </p>
+    );
+  }
+  if (state === 'invalid') {
+    return <p id="email-feedback" className="mt-1.5 text-xs text-red-600 font-medium">{labels.emailInvalid}</p>;
+  }
+  if (state === 'valid') {
+    return <p id="email-feedback" className="mt-1.5 text-xs text-green-600 font-medium">✓ {labels.emailValid}</p>;
+  }
+  return <p id="email-feedback" className="mt-1.5 text-xs text-gray-400">{labels.emailHint}</p>;
+}
 
 function FieldLabel({
   htmlFor,
