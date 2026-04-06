@@ -10,15 +10,7 @@ export default function Footer() {
   const ko = locale === 'ko';
 
   return (
-    <footer className="relative bg-[#050A34] text-white" role="contentinfo">
-      {/* Symbol divider */}
-      <div className="absolute inset-x-0 top-0 flex flex-col items-center" aria-hidden="true">
-        <div className="-translate-y-1/2 bg-[#050A34] px-4">
-          <DFLSymbol size={18} variant="blue" />
-        </div>
-        <div className="absolute top-1/2 inset-x-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
-      </div>
-
+    <footer className="bg-[#050A34] text-white" role="contentinfo">
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & Tagline */}
