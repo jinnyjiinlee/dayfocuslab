@@ -1,118 +1,22 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
 import PageHero from '@/components/shared/PageHero';
 import ContactCard from '@/components/shared/ContactCard';
+import ContactForm from '@/components/shared/ContactForm';
 
 export default function Contact() {
-  const { t, locale } = useLanguage();
+  const { locale, t } = useLanguage();
   const ko = locale === 'ko';
-
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus('sending');
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    const res = await fetch('https://formspree.io/f/meepvkog', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' },
-    });
-
-    if (res.ok) {
-      setStatus('success');
-      form.reset();
-    } else {
-      setStatus('error');
-    }
-  }
 
   return (
     <>
       <PageHero title={t.contact.title} subtitle={t.contact.subtitle} />
 
-      {/* Contact Form */}
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 mb-12">
-            <h2 className="text-2xl font-bold text-[#050A34] mb-2">
-              {t.contact.info.title}
-            </h2>
-            <p className="text-gray-500 mb-8">{t.contact.info.description}</p>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    {t.contact.form.name}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#050A34] focus:ring-1 focus:ring-[#050A34] outline-none transition text-[#050A34]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    {t.contact.form.email}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#050A34] focus:ring-1 focus:ring-[#050A34] outline-none transition text-[#050A34]"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  {t.contact.form.subject}
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#050A34] focus:ring-1 focus:ring-[#050A34] outline-none transition text-[#050A34]"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  {t.contact.form.message}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#050A34] focus:ring-1 focus:ring-[#050A34] outline-none transition resize-none text-[#050A34]"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="w-full md:w-auto px-8 py-3.5 bg-[#050A34] text-white font-semibold rounded-xl hover:bg-[#0a1250] transition disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {status === 'sending' ? t.contact.form.sending : t.contact.form.submit}
-              </button>
-
-              {status === 'success' && (
-                <p className="text-green-600 font-medium">{t.contact.form.success}</p>
-              )}
-              {status === 'error' && (
-                <p className="text-red-600 font-medium">{t.contact.form.error}</p>
-              )}
-            </form>
+          <div className="mb-12">
+            <ContactForm />
           </div>
 
           <p className="text-center text-sm text-gray-400 mb-4 uppercase tracking-wider">
