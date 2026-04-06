@@ -97,7 +97,7 @@ export default function Header() {
         </div>
       </div>
 
-      <MobileMenu isOpen={isMenuOpen} links={navLinks} kakaoLabel={t.hero.freeConsultation} onClose={() => setIsMenuOpen(false)} />
+      <MobileMenu isOpen={isMenuOpen} links={navLinks} ctaLabel={t.nav.contact} onClose={() => setIsMenuOpen(false)} />
     </header>
   );
 }

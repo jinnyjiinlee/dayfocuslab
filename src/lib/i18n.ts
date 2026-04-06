@@ -107,7 +107,6 @@ export const translations = {
     cta: {
       title: 'AI로 업무를 혁신할 준비가 되셨나요?',
       subtitle: '기업 맞춤 AI 도입 상담을 무료로 진행합니다. 지금 바로 문의하세요.',
-      kakao: '카카오톡 상담',
       enterprise: '기업 도입 문의',
     },
     about: {
@@ -208,8 +207,8 @@ export const translations = {
         title: '결제가 완료되었습니다',
         orderId: '주문번호',
         amount: '결제금액',
-        guide: '카카오톡으로 일정 안내를 드리겠습니다.',
-        kakao: '카카오톡 문의',
+        guide: '이메일로 일정 안내를 드리겠습니다. 추가 문의사항은 문의 페이지를 이용해주세요.',
+        kakao: '문의하기',
         home: '홈으로',
         verifying: '결제를 확인하고 있습니다...',
         error: '결제 확인 중 오류가 발생했습니다.',
@@ -334,7 +333,6 @@ export const translations = {
     cta: {
       title: 'Ready to Transform with AI?',
       subtitle: 'We offer free enterprise AI adoption consultations. Get in touch today.',
-      kakao: 'KakaoTalk',
       enterprise: 'Enterprise Inquiry',
     },
     about: {
@@ -435,8 +433,8 @@ export const translations = {
         title: 'Payment Completed',
         orderId: 'Order ID',
         amount: 'Amount',
-        guide: 'We will contact you via KakaoTalk for scheduling.',
-        kakao: 'KakaoTalk Inquiry',
+        guide: 'We will contact you via email for scheduling. For further inquiries, please use our contact page.',
+        kakao: 'Contact Us',
         home: 'Home',
         verifying: 'Verifying payment...',
         error: 'An error occurred while verifying payment.',

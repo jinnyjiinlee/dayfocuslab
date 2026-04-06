@@ -38,7 +38,6 @@ export default function Home() {
         subtitle={t.cta.subtitle}
         ctaLabel={t.cta.enterprise}
         ctaHref="/contact"
-        kakaoLabel={t.cta.kakao}
       />
     </>
   );

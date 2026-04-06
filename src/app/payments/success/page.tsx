@@ -105,14 +105,12 @@ function SuccessContent() {
         <p className="text-gray-600 mb-8">{t.payment.success.guide}</p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="https://open.kakao.com/o/sSp6Rcli"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="px-8 py-4 bg-[#050A34] text-white font-medium rounded-xl hover:bg-[#020151] transition-colors"
           >
             {t.payment.success.kakao}
-          </a>
+          </Link>
           <Link
             href="/"
             className="px-8 py-4 bg-white text-[#050A34] font-medium rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"

@@ -64,7 +64,7 @@ export default function Services() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/checkout" className="px-8 py-4 bg-[#050A34] text-white font-medium rounded-xl hover:bg-[#020151] transition-colors text-center">결제하기</Link>
-            <a href="https://open.kakao.com/o/sSp6Rcli" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#050A34] text-white font-medium rounded-xl hover:bg-[#020151] transition-colors text-center">무료 상담 신청</a>
+            <Link href="/contact" className="px-8 py-4 bg-white border border-[#050A34] text-[#050A34] font-medium rounded-xl hover:bg-gray-50 transition-colors text-center">무료 상담 신청</Link>
           </div>
         </div>
         <div>
@@ -113,7 +113,6 @@ export default function Services() {
         subtitle={t.contact.info.description}
         ctaLabel={t.nav.contact}
         ctaHref="/contact"
-        kakaoLabel="카카오톡 상담"
       />
     </>
   );
