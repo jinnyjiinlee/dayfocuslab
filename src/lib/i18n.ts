@@ -116,8 +116,8 @@ export const translations = {
         title: '대표 소개',
         name: '이지인 (Jinny)',
         role: 'DAYFOCUS LAB 대표',
-        bio: '사람들이 본질에 몰입할 수 있도록 돕는 일을 합니다. AI로 반복업무를 자동화하고, 물리적 포커스 스페이스를 운영하며, 디지털·오프라인 양면에서 몰입 환경을 설계합니다. 코드잇·코르카를 거쳐 DAYFOCUS LAB을 창업했고, 직접 빌드한 서비스로 취준생·개인사업자·학습자의 일상 속 마찰을 덜어내고 있습니다.',
-        expertise: ['AI Transformation', '업무 자동화', '클로드코드', 'Focus Space 운영', '몰입 설계'],
+        bio: '효율 · 몰입 · 성장, 세 가지를 설계합니다. AI로 반복업무를 자동화해 시간을 확보하는 "효율", 포커스 스페이스를 직접 운영하며 집중 환경을 만드는 "몰입", 그리고 멘토링과 교육으로 사람의 가능성을 여는 "성장". 대학생 500명 멘토링에서 시작된 커리어가 코드잇·코르카를 거쳐 DAYFOCUS LAB 창업으로 이어졌습니다. 교육자 출신 AX 전문가로서, 사람을 이해하는 자동화를 만듭니다.',
+        expertise: ['AI Transformation', '업무 자동화', 'Focus Space 운영', '효율 · 몰입 설계', '멘토링 · 교육'],
         linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
         careerLabel: 'Career',
         credentialsLabel: 'Credentials',
@@ -128,9 +128,9 @@ export const translations = {
             company: 'DAYFOCUS LAB',
             period: '2025.12 – 현재',
             highlights: [
-              '직장인·자영업자의 몰입을 돕는 AX(AI Transformation) 컨설팅',
-              '포커스 스페이스 1호점(서울점)·2호점(경기점) 직접 운영 중',
-              '클로드코드로 매장 운영 업무 90% 자동화 — 운영자가 본질에 집중하도록',
+              '직장인·자영업자 대상 AX(AI Transformation) 컨설팅 — 업무 효율 극대화',
+              '포커스 스페이스 1호점(서울점)·2호점(경기점) 직접 운영 — 몰입 환경 제공',
+              '클로드코드로 매장 운영 업무 90% 자동화 달성',
             ],
           },
           {
@@ -138,7 +138,7 @@ export const translations = {
             company: '코르카 (Korca)',
             period: '2025.10 – 2025.12',
             highlights: [
-              '기업 AI 도입 프로젝트 수행 — 반복업무를 덜어내 사람이 본질에 집중하도록',
+              '기업 AI 도입 프로젝트 수행, 반복업무 자동화로 조직 생산성 향상',
             ],
           },
           {
@@ -158,17 +158,17 @@ export const translations = {
             highlights: [
               '한솔제지 IDP(Individual Development Plan) 멘토 PM',
               'McKinsey 7단계 문제해결 프레임워크 기반 8주 멘토링 설계·운영',
-              '직장인이 스스로 실무 문제를 정의·해결하며 성장에 몰입하도록 코칭',
+              '직장인의 자기주도 성장 코칭 — 스스로 실무 문제를 정의·해결하도록',
             ],
           },
           {
-            role: 'LX Planning Manager · Community Manager',
+            role: 'LX Planning Manager',
             company: '코드잇 (Codeit)',
             period: '2023.11 – 2024.10',
             highlights: [
               '운영 효율화 및 데이터 기반 의사결정 체계 구축',
               'Google Apps Script로 피어리뷰·메일 발송 자동화 → 작업 시간 90% 단축',
-              '멘토링 일지 자동화 83%↓, 부트캠프 관리 시트 자동화 80%↓ — 수강생 경험 향상',
+              '멘토링 일지 자동화 83%↓, 부트캠프 관리 시트 자동화 80%↓',
             ],
           },
           {
@@ -176,9 +176,9 @@ export const translations = {
             company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
             period: '2021.2 – 2023.7',
             highlights: [
-              '대학생 500명+ 1:1 멘토링 및 리더십 강의 30회+ 진행',
-              '잠비아 지부 업무 지원, 한국 대표 통역·소통 및 회원 유치 전략 기획',
-              '신규 고객 유입 80% 달성 · 누적 후원금 1억원 달성',
+              '"사람의 성장을 돕는다"는 커리어의 출발점 — 대학생 500명+ 1:1 멘토링',
+              '리더십 강의 30회+ · 잠비아 지부 업무 지원 · 한국 대표 통역·소통',
+              '신규 회원 유입 80% 달성 · 누적 후원금 1억원 달성',
             ],
           },
         ],
@@ -471,8 +471,8 @@ export const translations = {
         title: 'Meet the Founder',
         name: 'Jiin Lee (Jinny)',
         role: 'Founder, DAYFOCUS LAB',
-        bio: "I help people focus on what truly matters. Through AI-powered automation, physical focus spaces, and hands-on product building, I design environments — both digital and offline — where people can immerse themselves in meaningful work. Former LX Manager at Codeit and AX Engineer at Korca; founded DAYFOCUS LAB to unify everything I've learned about helping others stay in flow.",
-        expertise: ['AI Transformation', 'Business Automation', 'Claude Code', 'Focus Space Operations', 'Flow Design'],
+        bio: "I design for three things: efficiency, focus, and growth. I automate repetitive work with AI to reclaim time (efficiency), run physical focus spaces that make deep concentration possible (focus), and build mentoring programs that unlock people's potential (growth). My career started with 1:1 mentoring for 500+ university students, then took me through Codeit and Korca to founding DAYFOCUS LAB. I'm an educator-turned-AX specialist building automation that actually understands people.",
+        expertise: ['AI Transformation', 'Business Automation', 'Focus Space Operations', 'Efficiency & Flow Design', 'Mentoring & Education'],
         linkedin: 'https://www.linkedin.com/in/jiin-jinny-lee-15b4072b8/',
         careerLabel: 'Career',
         credentialsLabel: 'Credentials',
@@ -483,9 +483,9 @@ export const translations = {
             company: 'DAYFOCUS LAB',
             period: 'Dec 2025 – Present',
             highlights: [
-              'AX (AI Transformation) consulting for professionals and small business owners',
-              'Operating Focus Space #1 (Seoul) and #2 (Gyeonggi) hands-on',
-              '90% operations automation via Claude Code — so operators can focus on what matters',
+              'AX (AI Transformation) consulting for professionals and small business owners — maximizing efficiency',
+              'Operating Focus Space #1 (Seoul) and #2 (Gyeonggi) hands-on — providing environments for deep focus',
+              '90% operations automation via Claude Code',
             ],
           },
           {
@@ -493,7 +493,7 @@ export const translations = {
             company: 'Korca',
             period: 'Oct 2025 – Dec 2025',
             highlights: [
-              'Led enterprise AI adoption projects — removing repetitive work so people can focus on the essential',
+              'Led enterprise AI adoption projects, automating repetitive workflows to boost organizational productivity',
             ],
           },
           {
@@ -513,17 +513,17 @@ export const translations = {
             highlights: [
               'PM for Hansol Paper IDP (Individual Development Plan) mentoring program',
               'Designed & ran 8-week mentoring based on McKinsey 7-step problem-solving framework',
-              'Coached professionals to define & solve their own workplace problems — staying in growth flow',
+              'Coached professionals to define & solve their own real workplace challenges',
             ],
           },
           {
-            role: 'LX Planning Manager · Community Manager',
+            role: 'LX Planning Manager',
             company: 'Codeit',
             period: 'Nov 2023 – Oct 2024',
             highlights: [
               'Built data-driven operations and decision-making systems',
               'Automated peer review & email workflows via Google Apps Script — 90% time reduction',
-              'Mentor log automation 83%↓, bootcamp tracking sheet 80%↓ — better learner experience',
+              'Mentor log automation 83%↓, bootcamp tracking sheet 80%↓',
             ],
           },
           {
@@ -531,8 +531,8 @@ export const translations = {
             company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
             period: 'Feb 2021 – Jul 2023',
             highlights: [
-              '1:1 mentoring for 500+ university students, 30+ leadership lectures',
-              'Supported Zambia branch ops, served as interpreter/liaison for Korea delegation',
+              'Where my "helping people grow" career began — 1:1 mentoring for 500+ university students',
+              '30+ leadership lectures · supported Zambia branch · interpreter/liaison for Korea delegation',
               'Achieved 80% new member acquisition and 100M KRW cumulative fundraising',
             ],
           },
