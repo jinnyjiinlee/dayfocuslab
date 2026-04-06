@@ -137,7 +137,8 @@ export const translations = {
             company: '코르카 (Korca)',
             period: '2025.10 – 2025.12',
             highlights: [
-              '기업 AI 도입 프로젝트 수행, 반복업무 자동화로 조직 생산성 향상',
+              '사내 HR · 마케팅 등 직무별 AX 역량 향상 프로젝트 수행',
+              '외부 기업·기관 대상 AX 강의 및 워크숍 진행',
             ],
           },
           {
@@ -145,9 +146,7 @@ export const translations = {
             company: '자영업 / Independent',
             period: '2024.12 – 2025.9',
             highlights: [
-              '실사용자 기반 웹 서비스 기획·개발 (PotentialBot, Taxfree, LMS 외주 등)',
-              '기획→디자인→개발→운영 E2E, Next.js · TypeScript · Supabase 스택',
-              'LMS 외주: 제출률 20→60%, 로딩 5s→1s(-80%), 수강생 100명+ 사용',
+              '실사용자 기반 웹 서비스 제작 (PotentialBot, Taxfree, LMS 외주 등)',
             ],
           },
           {
@@ -166,8 +165,7 @@ export const translations = {
             period: '2023.11 – 2024.10',
             highlights: [
               '운영 효율화 및 데이터 기반 의사결정 체계 구축',
-              'Google Apps Script로 피어리뷰·메일 발송 자동화 → 작업 시간 90% 단축',
-              '멘토링 일지 자동화 83%↓, 부트캠프 관리 시트 자동화 80%↓',
+              'Google Apps Script 기반 업무 자동화로 운영 시간 대폭 단축',
             ],
           },
           {
@@ -491,7 +489,8 @@ export const translations = {
             company: 'Korca',
             period: 'Oct 2025 – Dec 2025',
             highlights: [
-              'Led enterprise AI adoption projects, automating repetitive workflows to boost organizational productivity',
+              'In-house AX capability building for HR, marketing, and other functional teams',
+              'Delivered AX lectures and workshops for external companies and institutions',
             ],
           },
           {
@@ -499,9 +498,7 @@ export const translations = {
             company: 'Independent',
             period: 'Dec 2024 – Sep 2025',
             highlights: [
-              'Shipped real-user web products end-to-end (PotentialBot, Taxfree, LMS contract, etc.)',
-              'Planning → Design → Dev → Ops on Next.js · TypeScript · Supabase stack',
-              'LMS contract: submission rate 20→60%, load time 5s→1s (-80%), 100+ active learners',
+              'Built real-user web services (PotentialBot, Taxfree, LMS contract, etc.)',
             ],
           },
           {
@@ -520,8 +517,7 @@ export const translations = {
             period: 'Nov 2023 – Oct 2024',
             highlights: [
               'Built data-driven operations and decision-making systems',
-              'Automated peer review & email workflows via Google Apps Script — 90% time reduction',
-              'Mentor log automation 83%↓, bootcamp tracking sheet 80%↓',
+              'Reduced operational hours significantly through Google Apps Script automation',
             ],
           },
           {

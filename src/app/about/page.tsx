@@ -18,7 +18,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[#050A34] mb-12 text-center">{t.about.founder.title}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 w-full max-w-[280px] sm:max-w-xs mx-auto lg:max-w-none lg:mx-0">
               <div className="aspect-[3/4] bg-[#F7F9FC] rounded-2xl overflow-hidden border border-gray-100">
                 <img src="/images/founder.png" alt={t.about.founder.name} className="w-full h-full object-cover" />
               </div>
@@ -41,7 +41,7 @@ export default function About() {
                 <ol className="space-y-5 border-l-2 border-gray-100 pl-5">
                   {t.about.founder.career.map((item: { role: string; company: string; period: string; highlights: string[] }, i: number) => (
                     <li key={i} className="relative">
-                      <span className="absolute -left-[27px] top-1.5 w-3 h-3 bg-[#085CF0] rounded-full border-2 border-white" />
+                      <span className="absolute -left-[26px] top-1.5 w-3 h-3 bg-[#085CF0] rounded-full border-2 border-white" />
                       <div className="flex flex-wrap items-baseline gap-x-2">
                         <span className="font-semibold text-[#050A34]">{item.role}</span>
                         <span className="text-gray-500 text-sm">· {item.company}</span>
@@ -110,12 +110,12 @@ export default function About() {
       {/* Mission & Vision */}
       <section className="py-20 md:py-24 bg-[#F7F9FC]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
               { title: t.about.mission.title, desc: t.about.mission.description, icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
               { title: t.about.vision.title, desc: t.about.vision.description, icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0zM2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+              <div key={i} className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm">
                 <div className="w-14 h-14 bg-[#050A34] text-white rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} /></svg>
                 </div>
