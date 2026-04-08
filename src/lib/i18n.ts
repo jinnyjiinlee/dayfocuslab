@@ -127,56 +127,31 @@ export const translations = {
             role: '대표 / Founder',
             company: 'DAYFOCUS LAB',
             period: '2025.12 – 현재',
-            highlights: [
-              '직장인·자영업자 대상 AX(AI Transformation) 컨설팅 — 업무 효율 극대화',
-              '포커스 스페이스 1호점(서울점)·2호점(경기점) 직접 운영 — 몰입 환경 제공',
-            ],
           },
           {
             role: 'AX Engineer',
-            company: '코르카 (Korca)',
+            company: 'CORCA',
             period: '2025.10 – 2025.12',
-            highlights: [
-              '사내 HR · 마케팅 등 직무별 AX 역량 향상 프로젝트 수행',
-              '외부 기업·기관 대상 AX 강의 및 워크숍 진행',
-            ],
           },
           {
             role: 'Software Developer · 1인 개발자',
             company: '자영업 / Independent',
             period: '2024.12 – 2025.9',
-            highlights: [
-              '실사용자 기반 웹 서비스 제작 (PotentialBot, Taxfree, LMS 외주 등)',
-            ],
           },
           {
             role: 'PM · IDP 프로젝트 멘토',
             company: '얼라이브커뮤니티 · 미래내일일경험',
             period: '2025.4 – 2025.7',
-            highlights: [
-              '한솔제지 IDP(Individual Development Plan) 멘토 PM',
-              'McKinsey 7단계 문제해결 프레임워크 기반 8주 멘토링 설계·운영',
-              '직장인의 자기주도 성장 코칭 — 스스로 실무 문제를 정의·해결하도록',
-            ],
           },
           {
             role: 'LX Planning Manager',
             company: '코드잇 (Codeit)',
             period: '2023.11 – 2024.10',
-            highlights: [
-              '운영 효율화 및 데이터 기반 의사결정 체계 구축',
-              'Google Apps Script 기반 업무 자동화로 운영 시간 대폭 단축',
-            ],
           },
           {
             role: 'Education Planning Manager',
             company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
             period: '2021.2 – 2023.7',
-            highlights: [
-              '"사람의 성장을 돕는다"는 커리어의 출발점 — 대학생 500명+ 1:1 멘토링',
-              '리더십 강의 30회+ · 잠비아 지부 업무 지원 · 한국 대표 통역·소통',
-              '신규 회원 유입 80% 달성 · 누적 후원금 1억원 달성',
-            ],
           },
         ],
         credentials: [
@@ -479,56 +454,31 @@ export const translations = {
             role: 'Founder',
             company: 'DAYFOCUS LAB',
             period: 'Dec 2025 – Present',
-            highlights: [
-              'AX (AI Transformation) consulting for professionals and small business owners — maximizing efficiency',
-              'Operating Focus Space #1 (Seoul) and #2 (Gyeonggi) hands-on — providing environments for deep focus',
-            ],
           },
           {
             role: 'AX Engineer',
-            company: 'Korca',
+            company: 'CORCA',
             period: 'Oct 2025 – Dec 2025',
-            highlights: [
-              'In-house AX capability building for HR, marketing, and other functional teams',
-              'Delivered AX lectures and workshops for external companies and institutions',
-            ],
           },
           {
             role: 'Software Developer · Indie Builder',
             company: 'Independent',
             period: 'Dec 2024 – Sep 2025',
-            highlights: [
-              'Built real-user web services (PotentialBot, Taxfree, LMS contract, etc.)',
-            ],
           },
           {
             role: 'Project PM · IDP Mentor',
             company: 'Alive Community · Mirae-Naeil Ilgyeongheom',
             period: 'Apr 2025 – Jul 2025',
-            highlights: [
-              'PM for Hansol Paper IDP (Individual Development Plan) mentoring program',
-              'Designed & ran 8-week mentoring based on McKinsey 7-step problem-solving framework',
-              'Coached professionals to define & solve their own real workplace challenges',
-            ],
           },
           {
             role: 'LX Planning Manager',
             company: 'Codeit',
             period: 'Nov 2023 – Oct 2024',
-            highlights: [
-              'Built data-driven operations and decision-making systems',
-              'Reduced operational hours significantly through Google Apps Script automation',
-            ],
           },
           {
             role: 'Education Planning Manager',
             company: 'Korea Campus Crusade for Christ (KCCC / Cru Korea)',
             period: 'Feb 2021 – Jul 2023',
-            highlights: [
-              'Where my "helping people grow" career began — 1:1 mentoring for 500+ university students',
-              '30+ leadership lectures · supported Zambia branch · interpreter/liaison for Korea delegation',
-              'Achieved 80% new member acquisition and 100M KRW cumulative fundraising',
-            ],
           },
         ],
         credentials: [

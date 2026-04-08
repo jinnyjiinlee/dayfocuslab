@@ -39,22 +39,14 @@ export default function About() {
               <div className="space-y-4 pt-2">
                 <h4 className="text-xs font-semibold text-[#085CF0] uppercase tracking-wider">{t.about.founder.careerLabel}</h4>
                 <ol className="space-y-5 border-l-2 border-gray-100 pl-5">
-                  {t.about.founder.career.map((item: { role: string; company: string; period: string; highlights: string[] }, i: number) => (
+                  {t.about.founder.career.map((item: { role: string; company: string; period: string }, i: number) => (
                     <li key={i} className="relative">
                       <span className="absolute -left-[26px] top-1.5 w-3 h-3 bg-[#085CF0] rounded-full border-2 border-white" />
                       <div className="flex flex-wrap items-baseline gap-x-2">
                         <span className="font-semibold text-[#050A34]">{item.role}</span>
                         <span className="text-gray-500 text-sm">· {item.company}</span>
                       </div>
-                      <p className="text-xs text-gray-400 mb-2">{item.period}</p>
-                      <ul className="space-y-1">
-                        {item.highlights.map((h: string, j: number) => (
-                          <li key={j} className="text-sm text-gray-600 flex items-start">
-                            <span className="mr-2 mt-1.5 w-1 h-1 bg-gray-400 rounded-full flex-shrink-0" />
-                            <span>{h}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <p className="text-xs text-gray-400">{item.period}</p>
                     </li>
                   ))}
                 </ol>
