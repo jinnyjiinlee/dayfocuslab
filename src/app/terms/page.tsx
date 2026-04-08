@@ -58,8 +58,7 @@ export default function Terms() {
             <section>
               <h2 className="text-lg font-bold text-[#050A34] mb-3">제5조 (서비스 요금)</h2>
               <ol className="list-decimal pl-5 space-y-2">
-                <li>AI PT 서비스 요금은 시간당 200,000원(부가세 별도)입니다.</li>
-                <li>최소 이용 시간은 3시간이며, 최소 결제 금액은 600,000원(부가세 별도)입니다.</li>
+                <li>AI PT 서비스 요금은 사전 상담을 통해 안내되며, 상담 후 협의된 금액으로 결제가 진행됩니다.</li>
                 <li>결제는 토스페이먼츠를 통한 온라인 결제로 진행됩니다.</li>
               </ol>
             </section>
