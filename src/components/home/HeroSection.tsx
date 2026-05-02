@@ -27,11 +27,10 @@ function HeroStats({ t, ko, isInView }: { t: Translations; ko: boolean; isInView
     { value: <AnimatedCounter end={90} suffix="%" isInView={isInView} />, label: t.stats.automation },
     { value: 'B2B · B2C', label: t.stats.personalizedTraining },
     { value: <AnimatedCounter end={2} suffix={ko ? '개' : ''} isInView={isInView} />, label: t.stats.focusSpaces },
-    { value: '24/7', label: t.stats.alwaysOpen },
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
       {items.map((stat, i) => (
         <div key={i} className="text-center md:text-left">
           <p className="text-3xl md:text-4xl font-black text-white tabular-nums mb-1">{stat.value}</p>

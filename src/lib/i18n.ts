@@ -221,10 +221,10 @@ export const translations = {
       values: {
         title: '핵심 가치',
         items: [
-          { title: '집중', description: '한 가지에 몰입할 때 최고의 결과가 나옵니다' },
-          { title: '성장', description: '매일 조금씩 나아가는 것이 큰 변화를 만듭니다' },
-          { title: '혁신', description: '새로운 기술과 방법으로 더 나은 방법을 찾습니다' },
-          { title: '신뢰', description: '진정성 있는 관계가 모든 것의 기초입니다' },
+          { title: '집중', subtitle: 'FOCUS', description: '한 가지에 몰입할 때 최고의 결과가 나옵니다' },
+          { title: '성장', subtitle: 'GROWTH', description: '매일 조금씩 나아가는 것이 큰 변화를 만듭니다' },
+          { title: '혁신', subtitle: 'INNOVATION', description: '새로운 기술과 방법으로 더 나은 방법을 찾습니다' },
+          { title: '진실함', subtitle: 'INTEGRITY', description: '거짓 없는 관계에서 모든 것이 시작됩니다' },
         ],
       },
     },
@@ -548,10 +548,10 @@ export const translations = {
       values: {
         title: 'Core Values',
         items: [
-          { title: 'Focus', description: 'The best results come from deep immersion in one thing' },
-          { title: 'Growth', description: 'Small daily progress creates big changes' },
-          { title: 'Innovation', description: 'Finding better ways with new technology and methods' },
-          { title: 'Trust', description: 'Authentic relationships are the foundation of everything' },
+          { title: 'Focus', subtitle: 'FOCUS', description: 'The best results come from deep immersion in one thing' },
+          { title: 'Growth', subtitle: 'GROWTH', description: 'Small daily progress creates big changes' },
+          { title: 'Innovation', subtitle: 'INNOVATION', description: 'Finding better ways with new technology and methods' },
+          { title: 'Integrity', subtitle: 'INTEGRITY', description: 'Genuine, no-pretense relationships are where everything begins' },
         ],
       },
     },

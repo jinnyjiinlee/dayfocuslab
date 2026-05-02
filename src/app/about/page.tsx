@@ -129,7 +129,10 @@ export default function About() {
                 <div className="w-16 h-16 bg-white text-[#085CF0] rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold">{i + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                <h3 className="text-xl font-bold mb-1">{value.title}</h3>
+                <p className="text-[10px] font-semibold tracking-[0.2em] text-[#AFE9FD]/70 mb-3 h-3.5">
+                  {value.subtitle && value.subtitle.toUpperCase() !== value.title.toUpperCase() ? value.subtitle : ''}
+                </p>
                 <p className="text-blue-100 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
